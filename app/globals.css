@@ -10,9 +10,9 @@
 :root {
   --ink: #101113;
   --muted: #46484d;
-  --pink: #ffe9ee; /* teal-100 */
-  --pink-strong: #0d9488; /* teal-600 */
-  --band: #fff4f6; /* teal-50 */
+  --pink: #ffe9ee;
+  --pink-strong: #e54d78;
+  --band: #fff4f6;
   --line: rgba(16, 17, 19, .1);
   --shadow: 0 12px 26px rgba(0, 0, 0, .12);
   --radius: 14px;
@@ -171,7 +171,7 @@ main {
   overflow: hidden;
   padding: 0;
   background:
-    radial-gradient(circle at 72% 20%, rgba(45, 212, 191, .2), transparent 34%),
+    radial-gradient(circle at 72% 20%, rgba(255, 193, 208, .2), transparent 34%),
     linear-gradient(105deg, #fff 0%, #fff4f6 45%, #ffe9ee 100%);
 }
 
@@ -276,7 +276,7 @@ main {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .9);
   border-radius: var(--radius);
-  background: linear-gradient(90deg, #99f6e4, #fff4f6 45%, #99f6e4);
+  background: linear-gradient(90deg, #ffd1dd, #fff4f6 45%, #ffd1dd);
   box-shadow: var(--shadow);
 }
 
@@ -320,21 +320,21 @@ main {
 
 .section-blush {
   background:
-    radial-gradient(circle at 77% 0%, rgba(45, 212, 191, .25), transparent 32%),
+    radial-gradient(circle at 77% 0%, rgba(255, 193, 208, .25), transparent 32%),
     linear-gradient(110deg, #fff 0%, #fff4f6 50%, #ffe9ee 100%);
 }
 
 .gallery-section {
   background:
-    radial-gradient(circle at 60% 0%, rgba(45, 212, 191, .2), transparent 30%),
+    radial-gradient(circle at 60% 0%, rgba(255, 193, 208, .2), transparent 30%),
     linear-gradient(160deg, #fff 0%, #fff4f6 55%, #ffe9ee 100%);
 }
 
 .reviews-section,
 .contact-section {
   background:
-    radial-gradient(circle at 70% 4%, rgba(45, 212, 191, .15), transparent 34%),
-    linear-gradient(180deg, #fff 0%, #fff4f6 58%, #e6fffa 100%);
+    radial-gradient(circle at 70% 4%, rgba(255, 193, 208, .15), transparent 34%),
+    linear-gradient(180deg, #fff 0%, #fff4f6 58%, #fff4f6 100%);
 }
 
 .contact-section {
@@ -343,8 +343,8 @@ main {
 
 .about-section {
   background:
-    radial-gradient(circle at 78% 15%, rgba(45, 212, 191, .2), transparent 36%),
-    linear-gradient(105deg, #fff 0%, #fff4f6 56%, #e6fffa 100%);
+    radial-gradient(circle at 78% 15%, rgba(255, 193, 208, .2), transparent 36%),
+    linear-gradient(105deg, #fff 0%, #fff4f6 56%, #fff4f6 100%);
 }
 
 .section-head {
@@ -953,7 +953,7 @@ main {
   align-items: center;
   gap: 34px;
   margin-top: 48px;
-  border: 1px solid rgba(13, 148, 136, .22);
+  border: 1px solid rgba(229, 77, 120, .22);
   border-radius: var(--radius);
   background: #fff4f6;
   padding: 30px 72px;

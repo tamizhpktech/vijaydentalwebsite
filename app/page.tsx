@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-[82px] max-lg:pt-[150px]">
+      <main className="pt-[110px]">
         <section id="home" className="hero-section">
           <div className="shell hero-grid">
             <div className="hero-copy">

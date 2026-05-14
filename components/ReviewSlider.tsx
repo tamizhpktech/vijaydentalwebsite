@@ -46,7 +46,7 @@ const reviews = [
   {
     name: "Selvakathir Nirmal Doss",
     initial: "S",
-    color: "#5ba85b",
+    color: "#e54d78",
     rating: 5,
     time: "1 year ago",
     text: "I had been to Dr. Vijay's clinic recently for root canal and cleaning. He was very patient and explained in detail. The hospital was neat and clean. There was no wait time since we had booked the appointment.",

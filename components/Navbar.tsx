@@ -113,10 +113,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-x-0 bottom-0 z-40 bg-white transition-opacity duration-300 ease-in-out lg:hidden border-t border-gray-100 overflow-y-auto ${
+        className={`absolute top-full left-0 w-full z-40 bg-white transition-opacity duration-300 ease-in-out lg:hidden border-t border-gray-100 overflow-y-auto ${
           mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
-        style={{ top: scrolled ? "64px" : "80px" }}
+        style={{ height: 'calc(100vh - 100%)' }}
       >
         <div className="p-8">
           <ul className="flex flex-col mb-10 w-full list-none m-0 p-0">

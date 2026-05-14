@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-[140px]">
+      <main>
         <section id="home" className="hero-section">
           <div className="shell hero-grid">
             <div className="hero-copy">
@@ -72,7 +72,7 @@ export default function Home() {
               </p>
               <Link href="/book" className="primary-btn">Book Appointment</Link>
             </div>
-            <div className="hero-image-wrap">
+            <div className="hero-image-wrap max-lg:hidden">
               <Image src="/asset/ChatGPT Image May 13, 2026, 10_13_34 PM.png" alt="Smiling family" fill priority className="hero-image" sizes="(max-width: 900px) 100vw, 58vw" />
             </div>
           </div>

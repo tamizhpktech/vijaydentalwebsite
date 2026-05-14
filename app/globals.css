@@ -187,7 +187,7 @@ main {
 .hero-copy {
   position: relative;
   z-index: 2;
-  padding-top: 46px;
+  padding-top: 140px;
 }
 
 .eyebrow {
@@ -1015,7 +1015,7 @@ main {
   }
 
   .hero-copy {
-    padding-top: 28px;
+    padding-top: 120px;
   }
 
   .hero-image-wrap {

@@ -113,8 +113,8 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-x-0 bottom-0 z-40 bg-white transition-all duration-500 ease-in-out lg:hidden border-t border-gray-100 ${
-          mobileOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+        className={`fixed inset-x-0 bottom-0 z-40 bg-white transition-opacity duration-300 ease-in-out lg:hidden border-t border-gray-100 ${
+          mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         style={{ top: scrolled ? "64px" : "80px" }}
       >

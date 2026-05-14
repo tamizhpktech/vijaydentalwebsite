@@ -120,17 +120,24 @@ export default function Navbar() {
       >
         <div className="p-8">
           <ul className="flex flex-col mb-10 w-full list-none m-0 p-0">
-            {links.map((link) => (
-              <li key={link.href} className="w-full">
-                <Link
-                  href={link.href}
-                  onClick={handleLinkClick}
-                  className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
+            <li className="w-full">
+              <Link href="/#home" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Home</Link>
+            </li>
+            <li className="w-full">
+              <Link href="/#services" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Services</Link>
+            </li>
+            <li className="w-full">
+              <Link href="/#gallery" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Smile Gallery</Link>
+            </li>
+            <li className="w-full">
+              <Link href="/#reviews" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Patient Reviews</Link>
+            </li>
+            <li className="w-full">
+              <Link href="/#about" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">About Us</Link>
+            </li>
+            <li className="w-full">
+              <Link href="/#contact" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Contact Us</Link>
+            </li>
           </ul>
           
           <div className="pt-8">

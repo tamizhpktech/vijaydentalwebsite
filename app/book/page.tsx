@@ -32,7 +32,7 @@ export default function BookAppointment() {
   return (
     <>
       <Navbar />
-      <div className="book-page pt-[120px] max-md:pt-[100px]">
+      <div className="book-page pt-[120px] max-md:pt-[160px]">
       <div className="book-shell">
         <div className="mb-8 text-center">
           <p className="text-sm font-extrabold uppercase tracking-wide text-[#0d9488]">Schedule your visit</p>

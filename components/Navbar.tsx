@@ -35,19 +35,19 @@ export default function Navbar() {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b border-gray-100 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-md h-16" : "bg-white/90 backdrop-blur-sm h-20"
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-md h-20" : "bg-white/90 backdrop-blur-sm h-24"
       }`}
     >
       <div className="mx-auto max-w-[1376px] px-6 h-full">
         <div className="flex items-center justify-between gap-4 h-full">
           {/* Logo */}
           <Link href="/#home" className="flex items-center gap-3 shrink-0" aria-label="Dr. Vijay's Dental Clinic home">
-            <Image 
-              src="/asset/logo1-removebg-preview.png" 
-              alt="Logo" 
-              width={50} 
-              height={49} 
-              className="h-10 w-auto max-sm:h-9" 
+              <Image 
+                src="/asset/logo6.png" 
+                alt="Logo" 
+              width={100} 
+              height={100} 
+              className="h-20 w-auto max-sm:h-16" 
             />
             <span className="flex flex-col leading-none">
               <small className="text-base font-extrabold text-black max-sm:text-[13px]">Dr. Vijay&apos;s</small>

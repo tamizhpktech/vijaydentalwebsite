@@ -32,7 +32,7 @@ export default function BookAppointment() {
   return (
     <>
       <Navbar />
-      <div className="book-page" style={{ paddingTop: '140px' }}>
+      <div className="book-page" style={{ paddingTop: '160px' }}>
       <div className="book-shell">
         <div className="mb-8 text-center">
           <p className="text-sm font-extrabold uppercase tracking-wide text-[#e54d78]">Schedule your visit</p>

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <Image src="/asset/logo1-removebg-preview.png" alt="Dr. Vijay's Dental Clinic Logo" width={80} height={78} className="brightness-0 invert" />
+              <Image src="/asset/logo5.png" alt="Dr. Vijay's Dental Clinic Logo" width={80} height={78} className="brightness-0 invert" />
               <div>
                 <div className="text-xs text-gray-400">Dr. Vijay&apos;s</div>
                 <div className="text-sm font-extrabold">DENTAL CLINIC</div>

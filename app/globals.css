@@ -30,6 +30,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -824,8 +825,8 @@ main {
   overflow: hidden;
   border-radius: 28px;
   background:
-    radial-gradient(circle at 50% 40%, rgba(204, 251, 241, .95), transparent 40%),
-    linear-gradient(135deg, rgba(240, 253, 250, .9), rgba(204, 251, 241, .75));
+    radial-gradient(circle at 50% 40%, rgba(255, 233, 238, .95), transparent 40%),
+    linear-gradient(135deg, rgba(255, 244, 246, .9), rgba(255, 233, 238, .75));
 }
 
 .doctor-image {

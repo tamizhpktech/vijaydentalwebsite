@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ReviewSlider from "@/components/ReviewSlider";
+import Navbar from "@/components/Navbar";
 
 type IconName = "sparkle" | "tooth" | "shield" | "star" | "thumb" | "phone" | "pin" | "clock" | "calendar" | "users" | "heart" | "implant" | "braces";
 
@@ -54,8 +55,8 @@ const stats = [
 export default function Home() {
   return (
     <>
-      <Header />
-      <main>
+      <Navbar />
+      <main className="pt-[82px] max-lg:pt-[64px]">
         <section id="home" className="hero-section">
           <div className="shell hero-grid">
             <div className="hero-copy">
@@ -227,26 +228,6 @@ export default function Home() {
   );
 }
 
-function Header() {
-  return (
-    <header className="site-header">
-      <Link href="#home" className="brand" aria-label="Dr. Vijay's Dental Clinic home">
-        <Image src="/asset/logo1-removebg-preview.png" alt="Dr. Vijay's Dental Clinic Logo" width={60} height={59} className="brand-logo" />
-        <span>
-          <small>Dr. Vijay&apos;s</small>
-          <strong>DENTAL CLINIC</strong>
-          <em>Expert Care with Precision</em>
-        </span>
-      </Link>
-      <nav className="main-nav">
-        {navItems.map(([href, label]) => (
-          <Link key={href} href={href}>{label}</Link>
-        ))}
-      </nav>
-      <Link href="/book" className="nav-cta">Book Appointment</Link>
-    </header>
-  );
-}
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 export default function BookAppointment() {
   const [formData, setFormData] = useState({
@@ -30,26 +31,8 @@ export default function BookAppointment() {
 
   return (
     <>
-      <header className="book-nav">
-        <Link href="/#home" className="book-logo" aria-label="Dr. Vijay's Dental Clinic home">
-          <Image src="/asset/logo1-removebg-preview.png" alt="Dr. Vijay's Dental Clinic Logo" width={60} height={59} className="brand-logo" />
-          <span>
-            <small>Dr. Vijay&apos;s</small>
-            <strong>DENTAL CLINIC</strong>
-            <em>Expert Care with Precision</em>
-          </span>
-        </Link>
-        <nav>
-          <Link href="/#home">Home</Link>
-          <Link href="/#services">Services</Link>
-          <Link href="/#gallery">Smile Gallery</Link>
-          <Link href="/#reviews">Patient Reviews</Link>
-          <Link href="/#about">About Us</Link>
-          <Link href="/#contact">Contact Us</Link>
-        </nav>
-        <Link href="/book" className="book-nav-cta">Book Appointment</Link>
-      </header>
-      <div className="book-page">
+      <Navbar />
+      <div className="book-page pt-[120px] max-md:pt-[100px]">
       <div className="book-shell">
         <div className="mb-8 text-center">
           <p className="text-sm font-extrabold uppercase tracking-wide text-[#0d9488]">Schedule your visit</p>

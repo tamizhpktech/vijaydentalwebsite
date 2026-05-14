@@ -451,7 +451,7 @@ export function PatientReviewsPage() {
           />
         </div>
       </div>
-      <div className="mt-0 rounded-t-[28px] bg-[#f0fdfa] py-14">
+      <div className="mt-0 rounded-t-[28px] bg-[#fff4f6] py-14">
         <div className="site-container">
           <h2 className="text-center text-[39px] font-extrabold tracking-tight text-black max-md:text-3xl">Real Patient Stories, Real Transformations</h2>
           <div className="mx-auto mt-8 grid max-w-[1280px] grid-cols-3 gap-8 max-lg:grid-cols-1">
@@ -484,14 +484,14 @@ export function AboutPage() {
     <section className="min-h-[calc(100vh-126px)] bg-about-blush">
       <div className="site-container relative grid min-h-[660px] grid-cols-[0.95fr_1.05fr] items-center gap-8 py-16 max-lg:grid-cols-1">
         <div>
-          <p className="text-base font-extrabold uppercase tracking-wide text-[#0d9488]">Our Commitment</p>
+          <p className="text-base font-extrabold uppercase tracking-wide text-[#e54d78]">Our Commitment</p>
           <h1 className="mt-6 text-[64px] font-extrabold leading-none tracking-tight text-black max-md:text-5xl">About Us</h1>
           <p className="mt-10 max-w-[470px] text-[18px] leading-[1.65] text-black">
             At Dr. Vijay&apos;s Dental Clinic, we believe that a healthy smile leads to a happy life. With years of experience and a patient-first approach, we are dedicated to providing the highest quality dental care in a comfortable and friendly environment.
           </p>
           <div className="my-10 flex max-w-[390px] items-center gap-5">
             <span className="h-px flex-1 bg-[#d7b7c0]" />
-            <Icon name="sparkle" className="h-5 w-5 text-[#0d9488]" />
+            <Icon name="sparkle" className="h-5 w-5 text-[#e54d78]" />
             <span className="h-px flex-1 bg-[#d7b7c0]" />
           </div>
           <div className="grid max-w-[520px] grid-cols-4 gap-5 max-sm:grid-cols-2">
@@ -524,11 +524,11 @@ export function AboutPage() {
       </div>
       <div className="bg-white py-20 text-center">
         <div className="site-container">
-          <p className="text-sm font-extrabold uppercase tracking-wide text-[#0d9488]">Why Choose Us</p>
+          <p className="text-sm font-extrabold uppercase tracking-wide text-[#e54d78]">Why Choose Us</p>
           <h2 className="mt-4 text-[40px] font-extrabold text-black max-md:text-3xl">Your Smile, Our Priority</h2>
           <div className="mx-auto mt-7 flex max-w-[230px] items-center gap-5">
             <span className="h-px flex-1 bg-[#d7b7c0]" />
-            <Icon name="sparkle" className="h-5 w-5 text-[#0d9488]" />
+            <Icon name="sparkle" className="h-5 w-5 text-[#e54d78]" />
             <span className="h-px flex-1 bg-[#d7b7c0]" />
           </div>
           <p className="mx-auto mt-7 max-w-[670px] text-lg leading-relaxed text-black">
@@ -546,7 +546,7 @@ export function AboutPage() {
               ["headset", "Friendly", "", "Support"],
             ].map(([icon, value, line1, line2]) => (
               <div key={value} className="border-r border-black/10 px-6 py-7 text-center last:border-r-0">
-                <Icon name={icon as IconName} className="mx-auto h-8 w-8 text-[#0d9488]" />
+                <Icon name={icon as IconName} className="mx-auto h-8 w-8 text-[#e54d78]" />
                 <p className="mt-5 text-2xl font-extrabold text-black">{value}</p>
                 <p className="mt-2 text-base leading-tight text-black">{line1 && <>{line1}<br /></>}{line2}</p>
               </div>
@@ -564,9 +564,9 @@ export function ContactPage() {
       <div className="site-container">
         <div className="grid grid-cols-[0.95fr_1.05fr] gap-20 max-lg:grid-cols-1">
           <div className="pt-16">
-            <Eyebrow color="text-[#0d9488]">We&apos;re here to help you<br />with all your dental needs</Eyebrow>
+            <Eyebrow color="text-[#e54d78]">We&apos;re here to help you<br />with all your dental needs</Eyebrow>
             <h1 className="mt-28 text-[88px] font-extrabold leading-none tracking-tight text-[#151617] max-md:mt-16 max-md:text-5xl">Contact Us</h1>
-            <div className="mt-8 h-1 w-24 bg-[#0d9488]" />
+            <div className="mt-8 h-1 w-24 bg-[#e54d78]" />
             <p className="mt-8 max-w-[510px] text-[23px] leading-[1.55] text-black">
               Have questions or need to book an appointment? Reach out to us - we&apos;re happy to help you smile with confidence.
             </p>

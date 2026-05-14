@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-[82px] max-lg:pt-[136px]">
+      <main className="pt-[82px] max-lg:pt-[150px]">
         <section id="home" className="hero-section">
           <div className="shell hero-grid">
             <div className="hero-copy">
@@ -297,7 +297,7 @@ function Icon({ name }: { name: IconName }) {
   if (name === "sparkle") return <svg viewBox="0 0 64 64"><path {...common} d="M28 5l5.9 16.1L50 27l-16.1 5.9L28 49l-5.9-16.1L6 27l16.1-5.9L28 5Z" /><path {...common} d="M49 7l2.3 6.2L58 16l-6.7 2.8L49 25l-2.3-6.2L40 16l6.7-2.8L49 7Z" /></svg>;
   if (name === "tooth") return <svg viewBox="0 0 64 64"><path {...common} d="M31.9 13.2c-4.3-5.6-13.7-5.1-18 .8-5.3 7.2.2 15 2.2 21.9 1.7 5.8 1.4 14.6 6 14.6 4.1 0 3.4-9.8 9.9-9.8 6.4 0 5.7 9.8 9.8 9.8 4.7 0 4.3-8.8 6-14.6 2-6.9 7.5-14.7 2.2-21.9-4.3-5.9-13.7-6.4-18.1-.8Z" /></svg>;
   if (name === "shield") return <svg viewBox="0 0 64 64"><path {...common} d="M32 7l20 7v16c0 13-8.1 22.4-20 27-11.9-4.6-20-14-20-27V14l20-7Z" /><path {...common} d="M32 17v29M21 31h22" /></svg>;
-  if (name === "star") return <svg viewBox="0 0 64 64"><path className="icon-fill" d="M32 6l7.6 15.4 17 2.5-12.3 12 2.9 17L32 44.8 16.8 53l2.9-17-12.3-12 17-2.5L32 6Z" /></svg>;
+  if (name === "star") return <svg viewBox="0 0 64 64"><path className="fill-brand-pink" d="M32 6l7.6 15.4 17 2.5-12.3 12 2.9 17L32 44.8 16.8 53l2.9-17-12.3-12 17-2.5L32 6Z" /></svg>;
   if (name === "thumb") return <svg viewBox="0 0 64 64"><path {...common} d="M23 55H12V29h11v26ZM23 31l10-21c1.2-2.5 5-1.7 5 1.1V25h12.2c4.1 0 7.2 3.7 6.4 7.8l-3 15.6A8 8 0 0 1 45.7 55H23V31Z" /></svg>;
   if (name === "phone") return <svg viewBox="0 0 64 64"><path {...common} d="M22 12l7 12-5 4c4 8 8 12 16 16l4-5 12 7c-1 6-5 10-11 10-18 0-37-19-37-37 0-6 4-10 14-7Z" /></svg>;
   if (name === "pin") return <svg viewBox="0 0 64 64"><path {...common} d="M32 58s18-17 18-33a18 18 0 0 0-36 0c0 16 18 33 18 33Z" /><circle {...common} cx="32" cy="25" r="6" /></svg>;

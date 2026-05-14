@@ -48,7 +48,7 @@ export default function Navbar() {
             <span className="flex flex-col leading-none">
               <small className="text-[11px] font-medium text-gray-600 max-sm:text-[9px]">Dr. Vijay&apos;s</small>
               <strong className="text-[19px] font-extrabold tracking-tight text-black max-sm:text-base">DENTAL CLINIC</strong>
-              <em className="text-[10px] font-normal not-italic text-brand-teal max-sm:text-[8px]">Expert Care with Precision</em>
+              <em className="text-[10px] font-normal not-italic text-brand-pink max-sm:text-[8px]">Expert Care with Precision</em>
             </span>
           </Link>
 
@@ -60,8 +60,8 @@ export default function Navbar() {
                 <Link 
                   key={link.href} 
                   href={link.href} 
-                  className={`text-[15px] font-bold transition-colors hover:text-brand-teal ${
-                    active ? "text-brand-teal" : "text-gray-800"
+                  className={`text-[15px] font-bold transition-colors hover:text-brand-pink ${
+                    active ? "text-brand-pink" : "text-gray-800"
                   }`}
                 >
                   {link.label}
@@ -73,7 +73,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <Link 
             href="/book" 
-            className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-[15px] font-bold text-white transition hover:bg-brand-teal-dark shadow-sm max-sm:px-4 max-sm:py-2.5 max-sm:text-sm"
+            className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-[15px] font-bold !text-white transition hover:bg-brand-pink-dark shadow-sm max-sm:px-4 max-sm:py-2.5 max-sm:text-sm"
           >
             Book Appointment
           </Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link 
                 key={link.href} 
                 href={link.href} 
-                className="text-sm font-bold text-gray-800 transition-colors hover:text-brand-teal active:text-brand-teal"
+                className="text-sm font-bold text-gray-800 transition-colors hover:text-brand-pink active:text-brand-pink"
               >
                 {link.label}
               </Link>

@@ -32,10 +32,10 @@ export default function BookAppointment() {
   return (
     <>
       <Navbar />
-      <div className="book-page pt-[120px] max-md:pt-[160px]">
+      <div className="book-page pt-[120px] max-md:pt-[180px]">
       <div className="book-shell">
         <div className="mb-8 text-center">
-          <p className="text-sm font-extrabold uppercase tracking-wide text-[#0d9488]">Schedule your visit</p>
+          <p className="text-sm font-extrabold uppercase tracking-wide text-[#e54d78]">Schedule your visit</p>
           <h1 className="mt-3 text-5xl font-extrabold tracking-tight text-black max-sm:text-4xl">Book Appointment</h1>
           <p className="mt-4 text-lg text-black">Send your appointment request directly to the clinic through WhatsApp.</p>
         </div>
@@ -45,7 +45,7 @@ export default function BookAppointment() {
             <div className="py-14 text-center">
               <h2 className="text-2xl font-extrabold text-black">Request Sent</h2>
               <p className="mt-3 text-gray-600">Your appointment request has opened in WhatsApp. We will confirm shortly.</p>
-              <Link href="/#home" className="mt-7 inline-flex rounded-xl bg-[#0d9488] px-8 py-3.5 font-bold text-white transition hover:bg-[#0f766e] shadow-sm">Return to Home Page</Link>
+              <Link href="/#home" className="mt-7 inline-flex rounded-xl bg-[#e54d78] px-8 py-3.5 font-bold text-white transition hover:bg-[#c13d63] shadow-sm">Return to Home Page</Link>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">

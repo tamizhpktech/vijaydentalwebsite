@@ -30,7 +30,7 @@ const reviews = [
   {
     name: "Sridhar Mannarsamy",
     initial: "S",
-    color: "#0d9488",
+    color: "#e54d78",
     rating: 5,
     time: "4 years ago",
     text: "Thanks to Dr. Vijay sir, I am oral cancer survivor. Based on his suggestion and went for 16 tooth root canal with less mouth opening. He did very patiently for all tooth also provide quality treatment.",
@@ -62,7 +62,7 @@ const reviews = [
   {
     name: "Salma B",
     initial: "S",
-    color: "#2d9a8f",
+    color: "#c13d63",
     rating: 5,
     time: "3 years ago",
     text: "I know Dr Vijay for more than a decade, from his Apollo days. My entire family's dental health depends on him. He is more of an artist when it comes to root canal treatment.",
@@ -70,7 +70,7 @@ const reviews = [
   {
     name: "Selina Samuel",
     initial: "S",
-    color: "#0d9488",
+    color: "#e54d78",
     rating: 5,
     time: "1 year ago",
     text: "I consulted Dr for fixing the central incisors and root canal. The doctor is very knowledgeable and trustworthy. The doctor explained the treatment in detail. The clinic is neatly maintained.",

@@ -2,17 +2,17 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --color-brand-teal: #0d9488;
-  --color-brand-teal-light: #ccfbf1;
-  --color-brand-teal-dark: #0f766e;
+  --color-brand-pink: #e54d78;
+  --color-brand-pink-light: #ffe9ee;
+  --color-brand-pink-dark: #c13d63;
 }
 
 :root {
   --ink: #101113;
   --muted: #46484d;
-  --pink: #ccfbf1; /* teal-100 */
+  --pink: #ffe9ee; /* teal-100 */
   --pink-strong: #0d9488; /* teal-600 */
-  --band: #f0fdfa; /* teal-50 */
+  --band: #fff4f6; /* teal-50 */
   --line: rgba(16, 17, 19, .1);
   --shadow: 0 12px 26px rgba(0, 0, 0, .12);
   --radius: 14px;
@@ -172,7 +172,7 @@ main {
   padding: 0;
   background:
     radial-gradient(circle at 72% 20%, rgba(45, 212, 191, .2), transparent 34%),
-    linear-gradient(105deg, #fff 0%, #f0fdfa 45%, #ccfbf1 100%);
+    linear-gradient(105deg, #fff 0%, #fff4f6 45%, #ffe9ee 100%);
 }
 
 .hero-grid {
@@ -276,7 +276,7 @@ main {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .9);
   border-radius: var(--radius);
-  background: linear-gradient(90deg, #99f6e4, #f0fdfa 45%, #99f6e4);
+  background: linear-gradient(90deg, #99f6e4, #fff4f6 45%, #99f6e4);
   box-shadow: var(--shadow);
 }
 
@@ -321,20 +321,20 @@ main {
 .section-blush {
   background:
     radial-gradient(circle at 77% 0%, rgba(45, 212, 191, .25), transparent 32%),
-    linear-gradient(110deg, #fff 0%, #f0fdfa 50%, #ccfbf1 100%);
+    linear-gradient(110deg, #fff 0%, #fff4f6 50%, #ffe9ee 100%);
 }
 
 .gallery-section {
   background:
     radial-gradient(circle at 60% 0%, rgba(45, 212, 191, .2), transparent 30%),
-    linear-gradient(160deg, #fff 0%, #f0fdfa 55%, #ccfbf1 100%);
+    linear-gradient(160deg, #fff 0%, #fff4f6 55%, #ffe9ee 100%);
 }
 
 .reviews-section,
 .contact-section {
   background:
     radial-gradient(circle at 70% 4%, rgba(45, 212, 191, .15), transparent 34%),
-    linear-gradient(180deg, #fff 0%, #f0fdfa 58%, #e6fffa 100%);
+    linear-gradient(180deg, #fff 0%, #fff4f6 58%, #e6fffa 100%);
 }
 
 .contact-section {
@@ -344,7 +344,7 @@ main {
 .about-section {
   background:
     radial-gradient(circle at 78% 15%, rgba(45, 212, 191, .2), transparent 36%),
-    linear-gradient(105deg, #fff 0%, #f0fdfa 56%, #e6fffa 100%);
+    linear-gradient(105deg, #fff 0%, #fff4f6 56%, #e6fffa 100%);
 }
 
 .section-head {
@@ -359,7 +359,7 @@ main {
   display: inline-flex;
   margin-bottom: 18px;
   border-radius: 999px;
-  background: #ccfbf1;
+  background: #ffe9ee;
   padding: 8px 22px;
   font-size: .88rem;
   font-weight: 850;
@@ -468,7 +468,7 @@ main {
   height: 52px;
   flex: 0 0 auto;
   border-radius: 999px;
-  background: #ccfbf1;
+  background: #ffe9ee;
   color: var(--ink);
 }
 
@@ -955,7 +955,7 @@ main {
   margin-top: 48px;
   border: 1px solid rgba(13, 148, 136, .22);
   border-radius: var(--radius);
-  background: #f0fdfa;
+  background: #fff4f6;
   padding: 30px 72px;
 }
 
@@ -974,7 +974,7 @@ main {
   min-height: calc(100vh - 84px);
   background:
     radial-gradient(circle at 74% 8%, rgba(45, 212, 191, .15), transparent 32%),
-    linear-gradient(105deg, #fff 0%, #f0fdfa 44%, #ccfbf1 100%);
+    linear-gradient(105deg, #fff 0%, #fff4f6 44%, #ffe9ee 100%);
   padding: 48px 20px;
 }
 

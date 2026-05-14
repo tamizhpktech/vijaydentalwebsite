@@ -50,7 +50,7 @@ export default function Navbar() {
               className="h-10 w-auto max-sm:h-9" 
             />
             <span className="flex flex-col leading-none">
-              <small className="text-[14px] font-bold text-gray-800 max-sm:text-[11px]">Dr. Vijay&apos;s</small>
+              <small className="text-base font-extrabold text-black max-sm:text-[13px]">Dr. Vijay&apos;s</small>
               <strong className="text-[19px] font-extrabold tracking-tight text-black max-sm:text-base">DENTAL CLINIC</strong>
               <em className="text-[10px] font-normal not-italic text-brand-pink max-sm:text-[8px]">Expert Care with Precision</em>
             </span>

@@ -50,7 +50,7 @@ export default function Navbar() {
               className="h-10 w-auto max-sm:h-9" 
             />
             <span className="flex flex-col leading-none">
-              <small className="text-[11px] font-medium text-gray-600 max-sm:text-[9px]">Dr. Vijay&apos;s</small>
+              <small className="text-[14px] font-bold text-gray-800 max-sm:text-[11px]">Dr. Vijay&apos;s</small>
               <strong className="text-[19px] font-extrabold tracking-tight text-black max-sm:text-base">DENTAL CLINIC</strong>
               <em className="text-[10px] font-normal not-italic text-brand-pink max-sm:text-[8px]">Expert Care with Precision</em>
             </span>
@@ -113,26 +113,26 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-x-0 bottom-0 z-40 bg-white transition-opacity duration-300 ease-in-out lg:hidden border-t border-gray-100 ${
+        className={`fixed inset-x-0 bottom-0 z-40 bg-white transition-opacity duration-300 ease-in-out lg:hidden border-t border-gray-100 overflow-y-auto ${
           mobileOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         style={{ top: scrolled ? "64px" : "80px" }}
       >
-        <div className="flex flex-col h-full p-8 overflow-y-auto">
-          <nav className="flex flex-col gap-6 mb-10">
+        <div className="flex flex-col p-8 min-h-full">
+          <nav className="flex flex-col mb-10">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={handleLinkClick}
-                className="text-2xl font-bold text-gray-900 transition-colors hover:text-brand-pink"
+                className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 transition-colors hover:text-brand-pink"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
           
-          <div className="mt-auto">
+          <div className="mt-auto pt-8">
             <Link
               href="/book"
               onClick={handleLinkClick}

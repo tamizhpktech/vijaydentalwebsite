@@ -118,21 +118,22 @@ export default function Navbar() {
         }`}
         style={{ top: scrolled ? "64px" : "80px" }}
       >
-        <div className="flex flex-col p-8 min-h-full">
-          <nav className="flex flex-col mb-10">
+        <div className="p-8">
+          <ul className="flex flex-col mb-10 w-full list-none m-0 p-0">
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={handleLinkClick}
-                className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 transition-colors hover:text-brand-pink"
-              >
-                {link.label}
-              </Link>
+              <li key={link.href} className="w-full">
+                <Link
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink"
+                >
+                  {link.label}
+                </Link>
+              </li>
             ))}
-          </nav>
+          </ul>
           
-          <div className="mt-auto pt-8">
+          <div className="pt-8">
             <Link
               href="/book"
               onClick={handleLinkClick}

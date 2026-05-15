@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/#home" className="flex items-center gap-3 shrink-0" aria-label="Dr. Vijay's Dental Clinic home">
               <Image 
-                src="/asset/logo6.png" 
+                src="/asset/logo8.png" 
                 alt="Logo" 
               width={100} 
               height={100} 

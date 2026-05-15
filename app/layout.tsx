@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Dr. Vijay's Dental Clinic | Expert Care with Precision",
   description: "Comprehensive Dental Care for a Healthier Smile. Dr. Vijay Amirtharaj, M.D.S. (Endodontist), Ph.D. 15+ years of experience in Adambakkam, Chennai.",
   icons: {
-    icon: "/asset/logo5.png",
+    icon: "/asset/logo8.png",
   },
 };
 

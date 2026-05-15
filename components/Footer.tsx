@@ -36,11 +36,6 @@ export default function Footer() {
 
         <div className="mt-8 flex flex-col items-center justify-between border-t border-gray-800 pt-6 text-xs text-gray-500 md:flex-row">
           <p>&copy; {new Date().getFullYear()} Dr. Vijay&apos;s Dental Clinic. All rights reserved.</p>
-          <div className="mt-2 flex gap-4 md:mt-0">
-            <span>Privacy Policy</span>
-            <span>|</span>
-            <span>Terms &amp; Conditions</span>
-          </div>
         </div>
       </div>
     </footer>

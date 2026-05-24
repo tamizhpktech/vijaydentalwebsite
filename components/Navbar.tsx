@@ -57,13 +57,15 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8 ml-auto mr-8">
+          <nav className="hidden lg:flex items-center gap-8 ml-auto mr-8" aria-label="Main navigation">
             {links.map((link) => {
-              const active = pathname === "/" && (link.href.startsWith("/#") ? false : pathname === link.href);
+              const isHash = link.href.startsWith("/#");
+              const active = pathname === "/" && !isHash ? pathname === link.href : false;
               return (
                 <Link 
                   key={link.href} 
-                  href={link.href} 
+                  href={link.href}
+                  replace={isHash}  
                   className={`text-[15px] font-bold transition-colors hover:text-brand-pink ${
                     active ? "text-brand-pink" : "text-gray-800"
                   }`}
@@ -121,22 +123,22 @@ export default function Navbar() {
         <div className="p-8">
           <ul className="flex flex-col mb-10 w-full list-none m-0 p-0">
             <li className="w-full">
-              <Link href="/#home" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Home</Link>
+              <Link href="/#home" replace onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Home</Link>
             </li>
             <li className="w-full">
-              <Link href="/#services" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Services</Link>
+              <Link href="/#services" replace onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Services</Link>
             </li>
             <li className="w-full">
-              <Link href="/#gallery" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Smile Gallery</Link>
+              <Link href="/#gallery" replace onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Smile Gallery</Link>
             </li>
             <li className="w-full">
-              <Link href="/#reviews" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Patient Reviews</Link>
+              <Link href="/#reviews" replace onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Patient Reviews</Link>
             </li>
             <li className="w-full">
-              <Link href="/#about" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">About Us</Link>
+              <Link href="/#about" replace onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">About Us</Link>
             </li>
             <li className="w-full">
-              <Link href="/#contact" onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Contact Us</Link>
+              <Link href="/#contact" replace onClick={handleLinkClick} className="block text-2xl font-bold text-black py-4 border-b border-gray-200 transition-colors hover:text-brand-pink">Contact Us</Link>
             </li>
           </ul>
           

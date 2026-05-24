@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="space-y-3 text-sm text-gray-400">
               <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> +91 99947 87165</p>
               <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> +91 98401 36328</p>
-              <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0" /> No.36, Main Rd, Kottivaikkam,<br />Adambakkam, Chennai 600088</p>
+              <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0" /> 33a, 1st Main Rd, Ramapuram,<br />N.G.O. Colony, Ganesh Nagar,<br />Adambakkam, Chennai 600088</p>
             </div>
           </div>
 

@@ -1,7 +1,79 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ReviewSlider from "@/components/ReviewSlider";
 import Navbar from "@/components/Navbar";
+
+export const metadata: Metadata = {
+  title: "Best Dentist in Adambakkam Chennai | Dr. Vijay's Dental Clinic",
+  description:
+    "Dr. Vijay's Dental Clinic in Adambakkam, Chennai — expert teeth whitening, dental implants, root canal, cosmetic dentistry & preventive care near Ramapuram & Ganesh Nagar. 15+ years experience. Book today!",
+  alternates: {
+    canonical: "https://www.vijaydentalclinic.in",
+  },
+  openGraph: {
+    title: "Best Dentist in Adambakkam Chennai | Dr. Vijay's Dental Clinic",
+    description:
+      "Expert dental care in Adambakkam, Chennai. Teeth whitening, implants, root canal, cosmetic dentistry & more. 15+ years experience. Book your appointment!",
+    url: "https://www.vijaydentalclinic.in",
+    type: "website",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Where is Dr. Vijay's Dental Clinic located?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Dr. Vijay's Dental Clinic is located at 33a, 1st Main Rd, Ramapuram, N.G.O. Colony, Ganesh Nagar, Adambakkam, Chennai, Tamil Nadu 600088.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the clinic timings?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The clinic is open Monday to Saturday, 10 AM – 1 PM and 5 PM – 9 PM. Sundays are by appointment only.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Dr. Vijay's Dental Clinic offer pain-free treatments?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Dr. Vijay's Dental Clinic is known for its 1% Pain Promise, using advanced techniques and modern anaesthesia to ensure a comfortable, nearly pain-free dental experience.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What dental services are available at Dr. Vijay's Dental Clinic?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Services include teeth whitening, dental implants, root canal treatments, cosmetic dentistry, cosmetic bonding, orthodontics, preventive care, and general check-ups.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How can I book an appointment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You can book an appointment online via the website's Book Appointment page, or call +91 99947 87165 / +91 98401 36328. Appointments can also be requested via WhatsApp.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is Dr. Vijay a specialist?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Dr. Vijay Amirtharaj holds a BDS and MDS degree and is an experienced endodontist with 16+ years of practice in comprehensive and cosmetic dental care.",
+      },
+    },
+  ],
+};
 
 type IconName = "sparkle" | "tooth" | "shield" | "star" | "thumb" | "phone" | "pin" | "clock" | "calendar" | "users" | "heart" | "implant" | "braces";
 
@@ -55,6 +127,10 @@ const stats = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main>
         <section id="home" className="hero-section">
@@ -210,7 +286,7 @@ export default function Home() {
             </div>
             <div className="contact-card">
               <ContactItem icon="phone" title="Call Us" lines={["+91 99947 87165", "+91 98401 36328"]} />
-              <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", "No.36, Main Rd, Kottivaikkam,", "No.26, Mailath, Kondity Nagar,", "Adambakkam, Chennai,", "Tamil Nadu 600088"]} />
+              <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", "33a, 1st Main Rd, Ramapuram,", "N.G.O. Colony, Ganesh Nagar,", "Adambakkam, Chennai,", "Tamil Nadu 600088"]} />
               <ContactItem icon="clock" title="Clinic Timings" lines={["Mon - Sat", "10 AM - 1 PM", "5 PM - 9 PM", "Sunday", "By appointment only"]} />
             </div>
           </div>

@@ -574,7 +574,7 @@ export function ContactPage() {
           <div className="rounded-[18px] bg-white p-10 shadow-card ring-1 ring-black/5">
             {[
               ["phone", "Call Us", ["+91 99947 87165", "+91 98401 36328"]],
-              ["pin", "Visit Us", ["Dr. Vijay's Dental Clinic", "No.36, Main Rd, Kottivaikkam,", "No.26, Mailath, Kondity Nagar,", "Adambakkam, Chennai,", "Tamil Nadu 600088"]],
+              ["pin", "Visit Us", ["Dr. Vijay's Dental Clinic", "33a, 1st Main Rd, Ramapuram,", "N.G.O. Colony, Ganesh Nagar,", "Adambakkam, Chennai,", "Tamil Nadu 600088"]],
               ["clock", "Clinic Timings", ["Mon - Sat", "10 AM - 1 PM", "5 PM - 9 PM", "Sunday", "By appointment only"]],
             ].map(([icon, title, lines], index) => (
               <div key={title as string} className={index === 0 ? "pb-10" : "border-t border-black/15 py-10 last:pb-0"}>

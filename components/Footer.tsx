@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "./DentalSite";
+import { CLINIC } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -22,9 +23,11 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-bold">Contact Us</h4>
             <div className="space-y-3 text-sm text-gray-400">
-              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> +91 99947 87165</p>
-              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> +91 98401 36328</p>
-              <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0" /> 33a, 1st Main Rd, Ramapuram,<br />N.G.O. Colony, Ganesh Nagar,<br />Adambakkam, Chennai 600088</p>
+              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> {CLINIC.phone[0]}</p>
+              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> {CLINIC.phone[1]}</p>
+              <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0" />
+                {CLINIC.address.line1}<br />{CLINIC.address.line2}<br />{CLINIC.address.city} {CLINIC.address.state}
+              </p>
             </div>
           </div>
 

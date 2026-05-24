@@ -24,6 +24,109 @@
   --small: .95rem;
 }
 
+/* ── Skip to content (accessibility) ─────────────────────────────────── */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 9999;
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: top 0.2s ease;
+  outline: 3px solid #e54d78;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ── Focus-visible — keyboard navigation ──────────────────────────────── */
+:focus-visible {
+  outline: 3px solid #e54d78;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── WhatsApp floating action button ─────────────────────────────────── */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 20px 14px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-fab:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 32px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-fab svg {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.whatsapp-fab-label {
+  white-space: nowrap;
+}
+
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45); }
+  50% { box-shadow: 0 6px 32px rgba(37, 211, 102, 0.75), 0 0 0 8px rgba(37, 211, 102, 0.12); }
+}
+
+.whatsapp-fab {
+  animation: wa-pulse 2.4s ease-in-out infinite;
+}
+
+.whatsapp-fab:hover {
+  animation: none;
+}
+
+/* On small screens, hide the label */
+@media (max-width: 480px) {
+  .whatsapp-fab {
+    padding: 14px;
+    bottom: 20px;
+    right: 20px;
+  }
+  .whatsapp-fab-label {
+    display: none;
+  }
+}
+
+/* ── Reduced motion — respect user preference ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .whatsapp-fab {
+    animation: none !important;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -993,16 +1096,27 @@ main {
 
 .book-input {
   width: 100%;
-  border: 1px solid #e5e7eb;
+  border: 1.5px solid #e5e7eb;
   border-radius: 12px;
   background: rgba(249, 250, 251, .7);
-  padding: 12px 16px;
+  padding: 14px 16px;
   font-size: var(--small);
   outline: none;
+  min-height: 48px; /* WCAG touch target minimum */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .book-input:focus {
+  border-color: #e54d78;
   box-shadow: 0 0 0 3px rgba(244, 114, 182, .28);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 0.8s linear infinite;
 }
 
 @media (max-width: 1180px) {

@@ -1,0 +1,6 @@
+Contact: mailto:security@vijaydentalclinic.in
+Contact: https://www.vijaydentalclinic.in/#contact
+Preferred-Languages: en
+Canonical: https://www.vijaydentalclinic.in/.well-known/security.txt
+Policy: https://www.vijaydentalclinic.in/privacy
+Expires: 2027-01-01T00:00:00.000Z

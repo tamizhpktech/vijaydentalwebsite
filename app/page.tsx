@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReviewSlider from "@/components/ReviewSlider";
 import Navbar from "@/components/Navbar";
+import { CLINIC } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Best Dentist in Adambakkam Chennai | Dr. Vijay's Dental Clinic",
@@ -77,15 +78,6 @@ const faqSchema = {
 
 type IconName = "sparkle" | "tooth" | "shield" | "star" | "thumb" | "phone" | "pin" | "clock" | "calendar" | "users" | "heart" | "implant" | "braces";
 
-const navItems = [
-  ["#home", "Home"],
-  ["#services", "Services"],
-  ["#gallery", "Smile Gallery"],
-  ["#reviews", "Patient Reviews"],
-  ["#about", "About Us"],
-  ["#contact", "Contact Us"],
-];
-
 const services = [
   ["Preventive Care", "Keep your smile healthy with regular check-ups and professional cleanings.", "/asset/service5.jpeg", "shield"],
   ["Root Canal Treatments", "Relieve pain and save your natural tooth with advanced root canal treatments.", "/asset/service6.jpeg", "star"],
@@ -132,7 +124,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Navbar />
-      <main>
+      <main id="main-content">
         <section id="home" className="hero-section">
           <div className="shell hero-grid">
             <div className="hero-copy">
@@ -285,8 +277,8 @@ export default function Home() {
               <p className="body-copy" style={{ marginTop: '20px' }}>Whether you&apos;re looking for a routine check-up, a complete smile makeover, or need urgent dental care — our friendly team is just a call away. With 16+ years of trusted expertise, state-of-the-art technology, and a commitment to pain-free treatments, Dr. Vijay&apos;s Dental Clinic is your family&apos;s partner in oral health. Walk in or book online — your perfect smile journey starts here.</p>
             </div>
             <div className="contact-card">
-              <ContactItem icon="phone" title="Call Us" lines={["+91 99947 87165", "+91 98401 36328"]} />
-              <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", "33a, 1st Main Rd, Ramapuram,", "N.G.O. Colony, Ganesh Nagar,", "Adambakkam, Chennai,", "Tamil Nadu 600088"]} />
+              <ContactItem icon="phone" title="Call Us" lines={[...CLINIC.phone]} />
+              <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", CLINIC.address.line1, CLINIC.address.line2, CLINIC.address.city, CLINIC.address.state]} />
               <ContactItem icon="clock" title="Clinic Timings" lines={["Mon - Sat", "10 AM - 1 PM", "5 PM - 9 PM", "Sunday", "By appointment only"]} />
             </div>
           </div>

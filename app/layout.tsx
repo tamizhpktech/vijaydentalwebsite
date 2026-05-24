@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -208,6 +209,11 @@ export default function RootLayout({
   return (
     <html lang="en-IN">
       <head>
+        {/* Geo meta tags for local SEO */}
+        <meta name="geo.region" content="IN-TN" />
+        <meta name="geo.placename" content="Adambakkam, Chennai, Tamil Nadu" />
+        <meta name="geo.position" content="12.9736;80.1974" />
+        <meta name="ICBM" content="12.9736, 80.1974" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -218,8 +224,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
+        {/* Skip to main content — accessibility */}
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

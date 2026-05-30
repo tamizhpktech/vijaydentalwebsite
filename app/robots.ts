@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "https://www.vijaydentalclinic.in/sitemap.xml",
-    host: "https://www.vijaydentalclinic.in",
+    sitemap: "https://drvijaysdentalclinic.com/sitemap.xml",
+    host: "https://drvijaysdentalclinic.com",
   };
 }

@@ -208,11 +208,11 @@ const serviceCards = [
     desc: "Brighten your smile and boost your confidence with advanced whitening solutions.",
   },
   {
-    title: "Bonding",
+    title: "Digital Dentistry",
     icon: "tooth" as IconName,
-    color: "text-[#111]",
-    image: "/asset/service2.webp",
-    desc: "Repair chips, cracks, and gaps with natural-looking, tooth-colored bonding treatments.",
+    id: "digital",
+    image: "/asset/dd.png",
+    desc: "Experience precise and comfortable treatments with our state-of-the-art digital dentistry solutions.",
   },
   {
     title: "Cosmetic Procedures",
@@ -259,7 +259,16 @@ const crop = [
   { x: 1157, y: 676, w: 307, h: 204 },
 ];
 
-function SmileCrop({ index, label }: { index: number; label: string }) {
+function SmileCrop({ index, label }: { index: number | string; label: string }) {
+  if (typeof index === "string") {
+    return (
+      <div className="relative h-full w-full overflow-hidden rounded-[8px] bg-white">
+        <Image src={index} alt={label} fill className="object-cover" />
+        <div className="ba-label absolute inset-x-0 bottom-0 py-2 text-center text-[20px] font-semibold text-white max-sm:text-sm">{label}</div>
+      </div>
+    );
+  }
+
   const c = crop[index];
   const positionX = (c.x / (1536 - c.w)) * 100;
   const positionY = (c.y / (1024 - c.h)) * 100;
@@ -279,12 +288,11 @@ function SmileCrop({ index, label }: { index: number; label: string }) {
   );
 }
 
-const galleryCards = [
-  { title: "TEETH WHITENING", sub: "A Brighter, Brighter Smile", icon: "tooth" as IconName, before: 0, after: 1 },
-  { title: "COSMETIC BONDING", sub: "Seamless Repair for Chipped Teeth", icon: "bonding" as IconName, before: 2, after: 3 },
-  { title: "ORTHODONTICS", sub: "Achieving Perfect Alignment", icon: "braces" as IconName, before: 4, after: 5 },
-  { title: "DENTAL IMPLANTS", sub: "Restore Function, Restore Confidence", icon: "implant" as IconName, before: 6, after: 7 },
-  { title: "PORCELAIN VENEERS", sub: "Flawless, Natural-Looking Smiles", icon: "tooth" as IconName, before: 8, after: 9 },
+const galleryCards: Array<{ title: string; sub: string; icon: IconName; before: number | string; after: number | string }> = [
+  { title: "TEETH WHITENING", sub: "A Brighter, Brighter Smile", icon: "tooth" as IconName, before: "/asset/smile-gallery/before-teeth-whitening.png", after: "/asset/smile-gallery/after-teeth-whitening.png" },
+  { title: "PORCELAIN VENEERS", sub: "Flawless, Natural-Looking Smiles", icon: "bonding" as IconName, before: "/asset/smile-gallery/before-porcelain-veneers.png", after: "/asset/smile-gallery/after-porcelain-veneers.png" },
+  { title: "ORTHODONTICS", sub: "Achieving Perfect Alignment", icon: "braces" as IconName, before: "/asset/smile-gallery/before-orthodontics.png", after: "/asset/smile-gallery/after-orthodontics.png" },
+  { title: "DENTAL IMPLANTS", sub: "Restore Function, Restore Confidence", icon: "implant" as IconName, before: "/asset/smile-gallery/before-dental-implants.png", after: "/asset/smile-gallery/after-dental-implants.png" },
   { title: "GUM CONTOURING", sub: "Balanced Gums, Beautiful Smiles", icon: "braces" as IconName, before: 10, after: 11 },
 ];
 
@@ -295,18 +303,22 @@ export function HomePage() {
       <div className="site-container relative h-full pt-28 max-lg:h-auto max-lg:pb-10 max-lg:pt-12">
         <div className="max-w-[700px]">
           <Eyebrow>I Invite you to care about<br />the aesthetics of your face</Eyebrow>
-          <h1 className="mt-8 text-[76px] font-extrabold leading-[1.08] tracking-tight text-[#151617] max-xl:text-[64px] max-md:text-[48px]">
-            Have a shining smile with modern methods!
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-tight mb-6">
+            Have a shining smile<br />
+            with advanced<br />
+            technology!
           </h1>
           <div className="mt-6 flex flex-wrap gap-3">
-            {["Teeth Whitening", "Cosmetic Dentistry", "Dental Implants", "Root Canal", "Preventive Care"].map((item) => (
+            {["Preventive Care", "Root Canal", "Cosmetic Dentistry", "Dental Implants", "Teeth Whitening", "Laser Dentistry"].map((item) => (
               <span key={item} className="rounded-2xl bg-white/78 px-5 py-3 text-base font-medium text-[#161719] shadow-sm backdrop-blur">
                 {item}
               </span>
             ))}
           </div>
-          <p className="mt-7 max-w-[560px] text-[21px] leading-[1.42] text-black">
-            I am committed to providing exceptional oral care to my patients. With advanced techniques and personalized attention, I ensure your dental health and <strong>well-being.</strong>
+          <p className="mt-7 max-w-[800px] text-[21px] leading-[1.42] text-black">
+            We are committed to providing exceptional oral care to our patients.<br />
+            With advanced techniques and personalized attention,<br />
+            We ensure your complete dental care and <strong>well-being.</strong>
           </p>
           <ActionButton className="mt-7 rounded-[28px] px-10 py-5 text-xl" />
         </div>
@@ -325,10 +337,10 @@ export function HomePage() {
         <div className="absolute bottom-0 left-1/2 z-20 w-[76%] -translate-x-1/2 rounded-2xl border border-white/80 bg-[linear-gradient(90deg,#ffd1dd,#fff4f7,#ffd3df)] px-16 py-7 shadow-[0_12px_42px_rgba(0,0,0,.16)] max-xl:w-[90%] max-md:static max-md:mt-8 max-md:translate-x-0 max-md:px-5">
           <div className="grid grid-cols-4 divide-x divide-black/30 max-md:grid-cols-2 max-md:divide-x-0 max-md:gap-5">
             {[
-              ["shield", "15+", "Years of", "Experience"],
+              ["shield", "25+", "Years of", "Experience"],
               ["star", "38", "5-Star", "Rates"],
               ["thumb", "99%", "Patient", "Satisfaction"],
-              ["tooth", "1%", "Pain", "Promise"],
+              ["tooth", "99%", "Painless", "Treatments"],
             ].map(([icon, value, line1, line2]) => (
               <div key={value} className="flex items-center justify-center gap-8 px-8 max-xl:gap-4 max-xl:px-4">
                 <Icon name={icon as IconName} className="h-14 w-14 text-black" />
@@ -355,7 +367,7 @@ export function ServicesPage() {
             Comprehensive Dental Care<br />for a Healthier Smile
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-xl leading-snug text-black">
-            At Dr. Vijay&apos;s Dental Clinic, we offer a wide range of advanced dental treatments tailored to your needs in a comfortable and caring environment.
+            At Dr. Vijay&apos;s Dental Clinic <strong>"NGO Colony,Admbkm"</strong>, we provide a wide range of advanced dental treatments tailored to your needs in a comfortable and caring environment.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-x-16 gap-y-4 text-base text-black">
             {["Advanced Technology", "Experienced Professionals", "Pain-free Treatments", "Patient-Centric Care"].map((item) => (
@@ -433,23 +445,16 @@ export function PatientReviewsPage() {
   return (
     <section className="min-h-[calc(100vh-126px)] bg-reviews-blush">
       <div className="site-container pt-20">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_560px]">
-          <div className="pl-32 max-xl:pl-0">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          <div>
+            <p className="mb-4 text-center text-sm font-extrabold uppercase tracking-wide text-[#e54d78]">Patient Reviews</p>
             <h1 className="text-[68px] font-extrabold leading-[1.08] tracking-tight text-black max-md:text-4xl">
-              Hear From Our<br />Happy Patients
+              Hear From Our Happy Patients
             </h1>
-            <p className="mt-6 max-w-[560px] text-2xl leading-tight text-black">
-              Authentic stories and transformations from those who have trusted Dr. Vijay
+            <p className="mt-6 text-2xl leading-tight text-black mx-auto max-w-[700px]">
+              Authentic stories and transformations from those who have trusted Dr. Vijay Amirtharaj
             </p>
           </div>
-          <Image
-            src="/asset/Max_a_extrct_all_the_7_ima.png"
-            alt="Happy patients"
-            width={1497}
-            height={1051}
-            className="h-[350px] w-full object-contain object-center"
-            priority
-          />
         </div>
       </div>
       <div className="mt-0 rounded-t-[28px] bg-[#fff4f6] py-14">
@@ -488,7 +493,7 @@ export function AboutPage() {
           <p className="text-base font-extrabold uppercase tracking-wide text-[#e54d78]">Our Commitment</p>
           <h1 className="mt-6 text-[64px] font-extrabold leading-none tracking-tight text-black max-md:text-5xl">About Us</h1>
           <p className="mt-10 max-w-[470px] text-[18px] leading-[1.65] text-black">
-            At Dr. Vijay&apos;s Dental Clinic, we believe that a healthy smile leads to a happy life. With years of experience and a patient-first approach, we are dedicated to providing the highest quality dental care in a comfortable and friendly environment.
+            At Dr. Vijay&apos;s Dental Clinic (NGO Colony, ADMBKM), we believe that a healthy smile leads to a happy life. With years of experience and a patient-first approach, we are dedicated to providing the highest quality dental care in a comfortable and friendly environment.
           </p>
           <div className="my-10 flex max-w-[390px] items-center gap-5">
             <span className="h-px flex-1 bg-[#d7b7c0]" />
@@ -508,7 +513,7 @@ export function AboutPage() {
         </div>
         <div className="relative min-h-[610px] overflow-hidden rounded-[30px] bg-[radial-gradient(circle_at_48%_38%,rgba(255,218,227,.7),transparent_38%)]">
           <Image
-            src="/asset/WhatsApp_Image_2026-05-13_at_20.13.07-removebg-preview.png"
+            src="/asset/df1.png"
             alt="Dr. Vijay"
             width={440}
             height={567}
@@ -516,7 +521,7 @@ export function AboutPage() {
             priority
           />
           <div className="absolute bottom-24 right-10 rounded-[18px] bg-white/90 px-8 py-6 shadow-card backdrop-blur max-md:right-4">
-            <h2 className="text-[26px] font-extrabold text-black">Dr. Vijay</h2>
+            <h2 className="text-[26px] font-extrabold text-black">Dr. Vijay Amirtharaj</h2>
             <p className="mt-2 text-sm font-semibold text-[#ce5577]">BDS, MDS</p>
             <p className="mt-3 text-sm text-black">Founder & Chief Dental Surgeon</p>
             <p className="mt-2 text-sm text-black">16+ Years of Experience</p>
@@ -533,7 +538,7 @@ export function AboutPage() {
             <span className="h-px flex-1 bg-[#d7b7c0]" />
           </div>
           <p className="mx-auto mt-7 max-w-[670px] text-lg leading-relaxed text-black">
-            We combine advanced technology, expert care, and a gentle approach to deliver the best dental experience for you and your family.
+            We combine advanced technology, expert care, and a patient centered approach to deliver the best dental experience for you and your family.
           </p>
           <ActionButton className="mt-10 rounded-full px-10 py-4 text-base">
             <span className="flex items-center gap-3"><Icon name="calendar" className="h-6 w-6" /> Book Appointment</span>
@@ -565,7 +570,7 @@ export function ContactPage() {
       <div className="site-container">
         <div className="grid grid-cols-[0.95fr_1.05fr] gap-20 max-lg:grid-cols-1">
           <div className="pt-16">
-            <Eyebrow color="text-[#e54d78]">We&apos;re here to help you<br />with all your dental needs</Eyebrow>
+            <Eyebrow color="text-[#e54d78]">We&apos;re here to help<br />you with all<br />your dental needs</Eyebrow>
             <h1 className="mt-28 text-[88px] font-extrabold leading-none tracking-tight text-[#151617] max-md:mt-16 max-md:text-5xl">Contact Us</h1>
             <div className="mt-8 h-1 w-24 bg-[#e54d78]" />
             <p className="mt-8 max-w-[510px] text-[23px] leading-[1.55] text-black">
@@ -574,9 +579,9 @@ export function ContactPage() {
           </div>
           <div className="rounded-[18px] bg-white p-10 shadow-card ring-1 ring-black/5">
             {[
-              ["phone", "Call Us", [CLINIC.phone[0], CLINIC.phone[1]]],
-              ["pin", "Visit Us", ["Dr. Vijay's Dental Clinic", CLINIC.address.line1, CLINIC.address.line2, CLINIC.address.city, CLINIC.address.state]],
-              ["clock", "Clinic Timings", ["Mon - Sat", "10 AM - 1 PM", "5 PM - 9 PM", "Sunday", "By appointment only"]],
+              ["phone", "Call Us", [CLINIC.phone[0]]],
+              ["pin", "Visit Us", ["Dr. Vijay's Dental Clinic", `${CLINIC.address.line1} ${CLINIC.address.line2}`, `${CLINIC.address.city} ${CLINIC.address.state}`]],
+              ["clock", "Clinic Timings", ["Mon - Sat", "5 PM - 9 PM", "Sunday", "By appointment only"]],
             ].map(([icon, title, lines], index) => (
               <div key={title as string} className={index === 0 ? "pb-10" : "border-t border-black/15 py-10 last:pb-0"}>
                 <div className="flex gap-10 max-sm:gap-5">
@@ -586,7 +591,7 @@ export function ContactPage() {
                   <div className="pt-2 text-[21px] leading-[1.55] text-black max-sm:text-base">
                     <h2 className="mb-2 text-[22px] font-extrabold text-black">{title as string}</h2>
                     {(lines as string[]).map((line, i) => (
-                      <p key={line} className={title === "Clinic Timings" && (i === 1 || i === 2) ? "font-extrabold" : ""}>{line}</p>
+                      <p key={line} className={title === "Clinic Timings" && i === 1 ? "font-extrabold" : ""}>{line}</p>
                     ))}
                   </div>
                 </div>
@@ -601,7 +606,7 @@ export function ContactPage() {
                 <Icon name="calendar" className="h-14 w-14 text-black" />
               </div>
               <div>
-                <h2 className="text-[25px] font-extrabold text-black">Ready for a healthier smile?</h2>
+                <h2 className="text-[25px] font-extrabold text-black">Prepare for a healthier smile?</h2>
                 <p className="mt-2 max-w-[520px] text-lg leading-snug text-black">
                   Book your appointment online in minutes and take the first step towards a confident, beautiful you.
                 </p>

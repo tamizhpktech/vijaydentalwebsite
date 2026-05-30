@@ -37,6 +37,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b border-gray-100 ${
         scrolled ? "bg-white/95 backdrop-blur-md shadow-md h-20" : "bg-white/90 backdrop-blur-sm h-24"
       }`}
+      style={{ backgroundColor: "var(--nav-bg, transparent)" }}
     >
       <div className="mx-auto max-w-[1376px] px-6 h-full">
         <div className="flex items-center justify-between gap-4 h-full">

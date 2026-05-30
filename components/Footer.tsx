@@ -24,16 +24,16 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-bold">Contact Us</h4>
             <div className="space-y-3 text-sm text-gray-400">
               <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> {CLINIC.phone[0]}</p>
-              <p className="flex items-center gap-2"><Icon name="phone" className="h-4 w-4" /> {CLINIC.phone[1]}</p>
+
               <p className="flex items-start gap-2"><Icon name="pin" className="mt-0.5 h-4 w-4 shrink-0" />
-                {CLINIC.address.line1}<br />{CLINIC.address.line2}<br />{CLINIC.address.city} {CLINIC.address.state}
+                {CLINIC.address.line1} {CLINIC.address.line2}<br />{CLINIC.address.city} {CLINIC.address.state}
               </p>
             </div>
           </div>
 
           <div>
             <h4 className="mb-4 text-sm font-bold">Clinic Timings</h4>
-            <p className="text-sm text-gray-400">Mon-Sat: 10 AM - 1 PM, 5 PM - 9 PM<br />Sunday: By appointment only</p>
+            <p className="text-sm text-gray-400">Mon-Sat: 5 PM - 9 PM<br />Sunday: By appointment only</p>
           </div>
         </div>
 

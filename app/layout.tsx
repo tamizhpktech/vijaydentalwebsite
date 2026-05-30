@@ -4,9 +4,10 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-const BASE_URL = "https://www.vijaydentalclinic.in";
+const BASE_URL = "https://drvijaysdentalclinic.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "Dr. Vijay's Dental Clinic",
     title: "Dr. Vijay's Dental Clinic | Best Dentist in Adambakkam, Chennai",
     description:
-      "Expert dental care in Adambakkam, Chennai. Teeth whitening, implants, root canal, cosmetic dentistry & more. 15+ years experience. Book your appointment today!",
+      "Expert dental care in Adambakkam, Chennai. Teeth whitening, implants, root canal, cosmetic dentistry & more. 25+ years experience. Book your appointment today!",
     images: [
       {
         url: "/opengraph-image.png",
@@ -105,13 +106,13 @@ const localBusinessSchema = {
   image: `${BASE_URL}/asset/logo8.png`,
   description:
     "Dr. Vijay's Dental Clinic offers comprehensive dental services including teeth whitening, dental implants, root canal treatments, cosmetic dentistry, and preventive care in Adambakkam, Chennai.",
-  telephone: ["+91-99947-87165", "+91-98401-36328"],
+  telephone: ["+91-99947-87165"],
   email: "vijaydentalclinic@gmail.com",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "33a, 1st Main Rd, Ramapuram, N.G.O. Colony, Ganesh Nagar",
+    streetAddress: "33A, N.G.O. Colony, Ganesh Nagar",
     addressLocality: "Adambakkam",
-    addressRegion: "Tamil Nadu",
+    addressRegion: "Chennai, Tamil Nadu",
     postalCode: "600088",
     addressCountry: "IN",
   },
@@ -165,7 +166,7 @@ const localBusinessSchema = {
     "@type": "Person",
     name: "Dr. Vijay Amirtharaj",
     jobTitle: "Chief Dental Surgeon & Endodontist",
-    description: "BDS, MDS — 16+ years of experience in comprehensive dental care",
+    description: "BDS, MDS — 25+ years of experience in comprehensive dental care",
     worksFor: {
       "@id": `${BASE_URL}/#dentist`,
     },
@@ -231,6 +232,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+        
       </body>
     </html>
   );

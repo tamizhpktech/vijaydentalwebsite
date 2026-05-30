@@ -8,15 +8,15 @@ import { CLINIC } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Best Dentist in Adambakkam Chennai | Dr. Vijay's Dental Clinic",
   description:
-    "Dr. Vijay's Dental Clinic in Adambakkam, Chennai — expert teeth whitening, dental implants, root canal, cosmetic dentistry & preventive care near Ramapuram & Ganesh Nagar. 15+ years experience. Book today!",
+    "Dr. Vijay's Dental Clinic in Adambakkam, Chennai — expert teeth whitening, dental implants, root canal, cosmetic dentistry & preventive care near Ganesh Nagar. 25+ years experience. Book today!",
   alternates: {
-    canonical: "https://www.vijaydentalclinic.in",
+    canonical: "https://www.drvijaysdentalclinic.com",
   },
   openGraph: {
     title: "Best Dentist in Adambakkam Chennai | Dr. Vijay's Dental Clinic",
     description:
-      "Expert dental care in Adambakkam, Chennai. Teeth whitening, implants, root canal, cosmetic dentistry & more. 15+ years experience. Book your appointment!",
-    url: "https://www.vijaydentalclinic.in",
+      "Expert dental care in Adambakkam, Chennai. Teeth whitening, implants, root canal, cosmetic dentistry & more. 25+ years experience. Book your appointment!",
+    url: "https://www.drvijaysdentalclinic.com",
     type: "website",
   },
 };
@@ -30,7 +30,7 @@ const faqSchema = {
       name: "Where is Dr. Vijay's Dental Clinic located?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dr. Vijay's Dental Clinic is located at 33a, 1st Main Rd, Ramapuram, N.G.O. Colony, Ganesh Nagar, Adambakkam, Chennai, Tamil Nadu 600088.",
+        text: "Dr. Vijay's Dental Clinic is located at 33A, N.G.O. Colony, Ganesh Nagar, Adambakkam, Chennai, Tamil Nadu 600088.",
       },
     },
     {
@@ -46,7 +46,7 @@ const faqSchema = {
       name: "Does Dr. Vijay's Dental Clinic offer pain-free treatments?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dr. Vijay's Dental Clinic is known for its 1% Pain Promise, using advanced techniques and modern anaesthesia to ensure a comfortable, nearly pain-free dental experience.",
+        text: "Yes. Dr. Vijay's Dental Clinic is known for its 99% pain free treatments, using advanced techniques and modern anaesthesia to ensure a comfortable, nearly pain-free dental experience.",
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: "How can I book an appointment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can book an appointment online via the website's Book Appointment page, or call +91 99947 87165 / +91 98401 36328. Appointments can also be requested via WhatsApp.",
+        text: "You can book an appointment online via the website's Book Appointment page, or call +91 99947 87165. Appointments can also be requested via WhatsApp.",
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: "Is Dr. Vijay a specialist?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dr. Vijay Amirtharaj holds a BDS and MDS degree and is an experienced endodontist with 16+ years of practice in comprehensive and cosmetic dental care.",
+        text: "Yes. Dr. Vijay Amirtharaj holds a BDS and MDS degree and is an experienced endodontist with 25+ years of practice in comprehensive and cosmetic dental care.",
       },
     },
   ],
@@ -81,18 +81,18 @@ type IconName = "sparkle" | "tooth" | "shield" | "star" | "thumb" | "phone" | "p
 const services = [
   ["Preventive Care", "Keep your smile healthy with regular check-ups and professional cleanings.", "/asset/service5.jpeg", "shield"],
   ["Root Canal Treatments", "Relieve pain and save your natural tooth with advanced root canal treatments.", "/asset/service6.jpeg", "star"],
-  ["Dental Implants", "Restore missing teeth with durable, natural-looking dental implants that last.", "/asset/service3.jpeg", "implant"],
+  ["Dental Implants", "Restore missing teeth with durable, natural-looking advanced dental implants system.", "/asset/service3.jpeg", "implant"],
   ["Teeth Whitening", "Brighten your smile and boost your confidence with advanced whitening solutions.", "/asset/service1.png", "sparkle"],
   ["Cosmetic Procedures", "Enhance your smile with our advanced cosmetic dental solutions.", "/asset/service7.jpeg", "tooth"],
-  ["Bonding", "Repair chips, cracks, and gaps with natural-looking, tooth-colored bonding treatments.", "/asset/service2.webp", "tooth"],
+  ["Digital Dentistry", "Experience precise and comfortable treatments with our state-of-the-art digital dentistry solutions.", "/asset/dd.png", "tooth"],
 ] as const;
 
-const gallery = [
-  ["DENTAL IMPLANTS", "Restore Function, Restore Confidence", 6, 7, "implant"],
-  ["ORTHODONTICS", "Achieving Perfect Alignment", 4, 5, "braces"],
-  ["TEETH WHITENING", "A Brighter, Brighter Smile", 0, 1, "tooth"],
-  ["COSMETIC BONDING", "Seamless Repair for Chipped Teeth", 2, 3, "sparkle"],
-] as const;
+const gallery: Array<[string, string, number | string, number | string, string]> = [
+  ["DENTAL IMPLANTS", "Restore Function, Restore Confidence", "/asset/smile-gallery/before-dental-implants.png", "/asset/smile-gallery/after-dental-implants.png", "implant"],
+  ["ORTHODONTICS", "Achieving Perfect Alignment", "/asset/smile-gallery/before-orthodontics.png", "/asset/smile-gallery/after-orthodontics.png", "braces"],
+  ["TEETH WHITENING", "A Brighter, Brighter Smile", "/asset/smile-gallery/before-teeth-whitening.png", "/asset/smile-gallery/after-teeth-whitening.png", "tooth"],
+  ["PORCELAIN VENEERS", "Flawless, Natural-Looking Smiles", "/asset/smile-gallery/before-porcelain-veneers.png", "/asset/smile-gallery/after-porcelain-veneers.png", "sparkle"],
+];
 
 const smileCrops = [
   { x: 32, y: 116, w: 329, h: 207 },
@@ -110,10 +110,10 @@ const smileCrops = [
 ];
 
 const stats = [
-  ["shield", "15+", "Years of Experience"],
+  ["shield", "25+", "Years of Experience"],
   ["star", "38", "5-Star Rates"],
   ["thumb", "99%", "Patient Satisfaction"],
-  ["tooth", "1%", "Pain Promise"],
+  ["tooth", "99%", "Pain free"],
 ] as const;
 
 export default function Home() {
@@ -129,14 +129,20 @@ export default function Home() {
           <div className="shell hero-grid">
             <div className="hero-copy">
               <Eyebrow>I Invite you to care about<br />the aesthetics of your face</Eyebrow>
-              <h1 className="hero-title">Have a shining smile with modern methods!</h1>
+              <h1 className="hero-title">
+                Have a shining smile<br />
+                with advanced<br />
+                technology!
+              </h1>
               <div className="pill-row">
-                {["Teeth Whitening", "Cosmetic Dentistry", "Dental Implants", "Root Canal", "Preventive Care"].map((item) => (
+                {["Preventive Care", "Root Canal", "Cosmetic Dentistry", "Dental Implants", "Laser Dentistry", "Digital Dentistry"].map((item) => (
                   <span key={item} className="soft-pill">{item}</span>
                 ))}
               </div>
               <p className="body-copy hero-text">
-                I am committed to providing exceptional oral care to my patients. With advanced techniques and personalized attention, I ensure your dental health and <strong>well-being.</strong>
+                We are committed to providing exceptional oral care to our patients.<br />
+                With advanced techniques and personalized attention,<br />
+                we ensure your complete dental care and <strong>well-being.</strong>
               </p>
               <Link href="/book" className="primary-btn">Book Appointment</Link>
             </div>
@@ -154,9 +160,9 @@ export default function Home() {
             <div className="section-head center">
               <span className="label-chip">Our Services</span>
               <h2 className="section-title">Comprehensive Dental Care<br />for a Healthier Smile</h2>
-              <p className="body-copy center-copy">At Dr. Vijay&apos;s Dental Clinic, we offer a wide range of advanced dental treatments tailored to your needs in a comfortable and caring environment.</p>
+              <p className="body-copy center-copy">At Dr. Vijay&apos;s Dental Clinic (NGO Colony,ADMBKM), we provide a wide range of advanced dental treatments tailored to your needs in a comfortable and caring environment.</p>
               <div className="benefit-row">
-                {["Advanced Technology", "Experienced Professionals", "Pain-free Treatments", "Patient-Centric Care"].map((item) => (
+                {["Advanced Technology", "Experienced consultants", "Pain-free Treatments", "Patient-Centric Care"].map((item) => (
                   <span key={item}><b>✓</b>{item}</span>
                 ))}
               </div>
@@ -169,7 +175,7 @@ export default function Home() {
                     <h3>{title}</h3>
                   </div>
                   <div className="service-media">
-                    <Image src={image} alt={title} fill className="card-image" sizes="(max-width: 800px) 100vw, 33vw" />
+                    <Image src={image} alt={title} fill className="card-image" style={{ objectFit: 'cover' }} sizes="(max-width: 800px) 100vw, 33vw" />
                   </div>
                   <p>{desc}</p>
                 </article>
@@ -207,12 +213,12 @@ export default function Home() {
         </section>
 
         <section id="reviews" className="section reviews-section">
-          <div className="shell reviews-hero">
-            <div>
-              <h2 className="section-title">Hear From Our<br />Happy Patients</h2>
-              <p className="body-copy" style={{ marginTop: 20 }}>Authentic stories and transformations from those who have trusted Dr. Vijay with their smiles. With over 5,000 happy patients and a perfect 5.0 rating on Google, our commitment to gentle, pain-free dental care speaks for itself.</p>
+          <div className="shell flex flex-col items-center text-center mx-auto max-w-4xl pb-10">
+            <div className="flex flex-col items-center">
+              <p className="section-kicker">Patient Reviews</p>
+              <h2 className="section-title text-center">Hear From Our Happy Patients</h2>
+              <p className="body-copy text-center max-w-[700px] mx-auto" style={{ marginTop: 20 }}>Authentic stories and transformations from those who have trusted Dr. Vijay Amirtharaj with their smiles. With over 5,000 happy patients and a perfect 5.0 rating on Google, our commitment to gentle, pain-free dental care speaks for itself.</p>
             </div>
-            <div className="review-collage-shot" role="img" aria-label="Happy patient portraits" />
           </div>
           <div className="shell review-panel">
             <h3>Real Patient Stories, Real Transformations</h3>
@@ -226,7 +232,7 @@ export default function Home() {
               <p className="section-kicker">Our Commitment</p>
               <h2 className="section-title">About Us</h2>
               <p className="body-copy about-copy">
-                At Dr. Vijay&apos;s Dental Clinic, we believe that a healthy smile leads to a happy life. With years of experience and a patient-first approach, we are dedicated to providing the highest quality dental care in a comfortable and friendly environment.
+                At Dr. Vijay&apos;s Dental Clinic (NGO Colony, ADMBKM), we believe that a healthy smile leads to a happy life. With years of experience and a patient-first approach, we are dedicated to providing the highest quality dental care in a comfortable and friendly environment.
               </p>
               <div className="divider-star"><span /><Icon name="sparkle" /><span /></div>
               <div className="values-grid">
@@ -245,15 +251,15 @@ export default function Home() {
             </div>
             <div className="doctor-panel">
               <div className="doctor-wrapper">
-                <Image src="/asset/Dr._Vijay_Amirtharaj._L_-1.jpg-removebg-preview.png" alt="Dr. Vijay" width={440} height={567} className="doctor-image" />
+                <Image src="/asset/df1.png" alt="Dr. Vijay" width={440} height={567} className="doctor-image" />
                 <div className="doctor-info-strip">
                   <div className="doc-name">
-                    <h3>Dr. Vijay</h3>
+                    <h3>Dr. Vijay Amirtharaj</h3>
                     <p>BDS, MDS</p>
                   </div>
                   <div className="doc-creds">
                     <span>Founder & Chief Dental Surgeon</span>
-                    <span>16+ Years of Experience</span>
+                    <span>25+ Years of Experience</span>
                   </div>
                 </div>
               </div>
@@ -263,7 +269,7 @@ export default function Home() {
             <p className="section-kicker">Why Choose Us</p>
             <h2 className="section-title compact">Your Smile, Our Priority</h2>
             <div className="divider-star centered"><span /><Icon name="sparkle" /><span /></div>
-            <p className="body-copy center-copy">We combine advanced technology, expert care, and a gentle approach to deliver the best dental experience for you and your family.</p>
+            <p className="body-copy center-copy">We combine advanced technology, expert care, and a patient centered approach to deliver the best dental experience for you and your family.</p>
             <Link href="/book" className="primary-btn with-icon"><Icon name="calendar" />Book Appointment</Link>
           </div>
         </section>
@@ -272,20 +278,20 @@ export default function Home() {
           <div className="shell contact-grid">
             <div>
               <p className="section-kicker">Contact Us</p>
-              <h2 className="section-title">We&apos;re here to help you<br />with all your dental needs</h2>
+              <h2 className="section-title">We&apos;re here to help<br />you with all<br />your dental needs</h2>
               <span className="accent-line" />
-              <p className="body-copy" style={{ marginTop: '20px' }}>Whether you&apos;re looking for a routine check-up, a complete smile makeover, or need urgent dental care — our friendly team is just a call away. With 16+ years of trusted expertise, state-of-the-art technology, and a commitment to pain-free treatments, Dr. Vijay&apos;s Dental Clinic is your family&apos;s partner in oral health. Walk in or book online — your perfect smile journey starts here.</p>
+              <p className="body-copy" style={{ marginTop: '20px' }}>Whether you&apos;re looking for a routine check-up, a complete smile makeover, or need urgent dental care — our friendly team is just a call away. With 25+ years of trusted expertise, state-of-the-art technology, and a commitment to pain-free treatments, Dr. Vijay&apos;s Dental Clinic (NGO Colony,ADMBKM) is your family&apos;s partner in oral health. Walk in or book online — your perfect smile journey starts here.</p>
             </div>
             <div className="contact-card">
-              <ContactItem icon="phone" title="Call Us" lines={[...CLINIC.phone]} />
-              <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", CLINIC.address.line1, CLINIC.address.line2, CLINIC.address.city, CLINIC.address.state]} />
-              <ContactItem icon="clock" title="Clinic Timings" lines={["Mon - Sat", "10 AM - 1 PM", "5 PM - 9 PM", "Sunday", "By appointment only"]} />
+              <ContactItem icon="phone" title="Call Us" lines={[CLINIC.phone[0]]} />
+              <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", `${CLINIC.address.line1} ${CLINIC.address.line2}`, `${CLINIC.address.city} ${CLINIC.address.state}`]} />
+              <ContactItem icon="clock" title="Clinic Timings" lines={["Mon - Sat", "5 PM - 9 PM", "Sunday", "By appointment only"]} />
             </div>
           </div>
           <div className="shell contact-cta">
             <div className="icon-bubble large"><Icon name="calendar" /></div>
             <div>
-              <h3>Ready for a healthier smile?</h3>
+              <h3>Prepare for a healthier smile?</h3>
               <p>Book your appointment online in minutes and take the first step towards a confident, beautiful you.</p>
             </div>
             <Link href="/book" className="primary-btn">Book Appointment</Link>
@@ -306,7 +312,16 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-function SmileTile({ index, label }: { index: number; label: string }) {
+function SmileTile({ index, label }: { index: number | string; label: string }) {
+  if (typeof index === "string") {
+    return (
+      <div className="image-tile relative overflow-hidden rounded-[8px]">
+        <Image src={index} alt={label} fill className="object-cover" />
+        <span className="absolute bottom-2 left-2 z-10 rounded bg-black/60 px-2 py-1 text-xs text-white">{label}</span>
+      </div>
+    );
+  }
+
   const crop = smileCrops[index];
   const positionX = (crop.x / (1536 - crop.w)) * 100;
   const positionY = (crop.y / (1024 - crop.h)) * 100;
@@ -353,7 +368,7 @@ function ContactItem({ icon, title, lines }: { icon: IconName; title: string; li
       <div>
         <h3>{title}</h3>
         {lines.map((line, index) => (
-          <p key={`${title}-${line}`} className={title === "Clinic Timings" && (index === 1 || index === 2) ? "bold-line" : ""}>{line}</p>
+          <p key={`${title}-${line}`} className={title === "Clinic Timings" && index === 1 ? "bold-line" : ""}>{line}</p>
         ))}
       </div>
     </div>

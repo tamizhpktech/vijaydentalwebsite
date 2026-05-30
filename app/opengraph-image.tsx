@@ -109,7 +109,7 @@ export default async function Image() {
           </div>
           <div style={{ display: "flex" }}>
             <span style={{ color: "rgba(255,255,255,0.85)", fontWeight: 600, fontSize: 15 }}>
-              vijaydentalclinic.in
+              drvijaysdentalclinic.com
             </span>
           </div>
         </div>

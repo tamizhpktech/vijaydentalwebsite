@@ -2,17 +2,24 @@
 
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --color-brand-pink: #e54d78;
-  --color-brand-pink-light: #ffe9ee;
+  --color-brand-pink: var(--pink-strong);
+  --color-brand-pink-light: var(--pink);
   --color-brand-pink-dark: #c13d63;
 }
 
 :root {
-  --ink: #101113;
+  --pink-rgb: 229, 77, 120;
+  --pink-blush: #FFF4F6;
+  --ink: #1F2937;
   --muted: #46484d;
-  --pink: #ffe9ee;
-  --pink-strong: #e54d78;
-  --band: #fff4f6;
+  --pink: #FFE9EE;
+  --pink-strong: #E54D78;
+  --band: #FFF4F6;
+  --primary-btn: #000;
+  --secondary-btn: #E54D78;
+  --hero-bg: #FFF4F6;
+  --doctor-bg: #FFF4F6;
+  --nav-bg: #FFFFFF;
   --line: rgba(16, 17, 19, .1);
   --shadow: 0 12px 26px rgba(0, 0, 0, .12);
   --radius: 14px;
@@ -38,7 +45,7 @@
   font-size: 0.95rem;
   text-decoration: none;
   transition: top 0.2s ease;
-  outline: 3px solid #e54d78;
+  outline: 3px solid var(--pink-strong);
 }
 
 .skip-link:focus {
@@ -47,7 +54,7 @@
 
 /* ── Focus-visible — keyboard navigation ──────────────────────────────── */
 :focus-visible {
-  outline: 3px solid #e54d78;
+  outline: 3px solid var(--pink-strong);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -253,7 +260,7 @@ main {
   justify-content: center;
   gap: 10px;
   border-radius: 12px;
-  background: var(--ink);
+  background: var(--primary-btn);
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
@@ -266,7 +273,7 @@ main {
 .nav-cta:hover,
 .book-nav-cta:hover,
 .primary-btn:hover {
-  background: #000;
+  background: var(--color-brand-pink-dark);
   transform: translateY(-1px);
 }
 
@@ -274,15 +281,13 @@ main {
   position: relative;
   overflow: hidden;
   padding: 0;
-  background:
-    radial-gradient(circle at 72% 20%, rgba(255, 193, 208, .2), transparent 34%),
-    linear-gradient(105deg, #fff 0%, #fff4f6 45%, #ffe9ee 100%);
+  background: var(--hero-bg, radial-gradient(circle at 72% 20%, rgba(var(--pink-rgb), .2), transparent 34%), linear-gradient(105deg, #fff 0%, var(--band) 45%, var(--pink) 100%));
 }
 
 .hero-grid {
   position: relative;
   display: grid;
-  grid-template-columns: .95fr 1.05fr;
+  grid-template-columns: 1.25fr 0.75fr;
   gap: 24px;
   min-height: 690px;
 }
@@ -313,7 +318,7 @@ main {
 }
 
 .hero-title {
-  max-width: 720px;
+  max-width: 900px;
   margin: 34px 0 24px;
   font-size: var(--h1);
   font-weight: 850;
@@ -332,7 +337,8 @@ main {
   display: inline-flex;
   border: 1px solid rgba(0, 0, 0, .08);
   border-radius: 999px;
-  background: rgba(255, 255, 255, .72);
+  background: #fff;
+  color: var(--ink);
   padding: 10px 16px;
   font-size: var(--small);
   font-weight: 650;
@@ -348,7 +354,7 @@ main {
 }
 
 .hero-text {
-  max-width: 570px;
+  max-width: 800px;
   margin: 26px 0 26px;
 }
 
@@ -380,7 +386,7 @@ main {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, .9);
   border-radius: var(--radius);
-  background: linear-gradient(90deg, #ffd1dd, #fff4f6 45%, #ffd1dd);
+  background: linear-gradient(90deg, var(--pink-blush), var(--band) 45%, var(--pink-blush));
   box-shadow: var(--shadow);
 }
 
@@ -424,21 +430,21 @@ main {
 
 .section-blush {
   background:
-    radial-gradient(circle at 77% 0%, rgba(255, 193, 208, .25), transparent 32%),
-    linear-gradient(110deg, #fff 0%, #fff4f6 50%, #ffe9ee 100%);
+    radial-gradient(circle at 77% 0%, rgba(var(--pink-rgb), .25), transparent 32%),
+    linear-gradient(110deg, #fff 0%, var(--band) 50%, var(--pink) 100%);
 }
 
 .gallery-section {
   background:
-    radial-gradient(circle at 60% 0%, rgba(255, 193, 208, .2), transparent 30%),
-    linear-gradient(160deg, #fff 0%, #fff4f6 55%, #ffe9ee 100%);
+    radial-gradient(circle at 60% 0%, rgba(var(--pink-rgb), .2), transparent 30%),
+    linear-gradient(160deg, #fff 0%, var(--band) 55%, var(--pink) 100%);
 }
 
 .reviews-section,
 .contact-section {
   background:
-    radial-gradient(circle at 70% 4%, rgba(255, 193, 208, .15), transparent 34%),
-    linear-gradient(180deg, #fff 0%, #fff4f6 58%, #fff4f6 100%);
+    radial-gradient(circle at 70% 4%, rgba(var(--pink-rgb), .15), transparent 34%),
+    linear-gradient(180deg, #fff 0%, var(--band) 58%, var(--band) 100%);
 }
 
 .contact-section {
@@ -446,9 +452,7 @@ main {
 }
 
 .about-section {
-  background:
-    radial-gradient(circle at 78% 15%, rgba(255, 193, 208, .2), transparent 36%),
-    linear-gradient(105deg, #fff 0%, #fff4f6 56%, #fff4f6 100%);
+  background: var(--doctor-bg, radial-gradient(circle at 78% 15%, rgba(var(--pink-rgb), .2), transparent 36%), linear-gradient(105deg, #fff 0%, var(--band) 56%, var(--band) 100%));
 }
 
 .section-head {
@@ -463,7 +467,7 @@ main {
   display: inline-flex;
   margin-bottom: 18px;
   border-radius: 999px;
-  background: #ffe9ee;
+  background: var(--pink);
   padding: 8px 22px;
   font-size: .88rem;
   font-weight: 850;
@@ -572,7 +576,7 @@ main {
   height: 52px;
   flex: 0 0 auto;
   border-radius: 999px;
-  background: #ffe9ee;
+  background: var(--pink);
   color: var(--ink);
 }
 
@@ -672,11 +676,12 @@ main {
 }
 
 .reviews-hero {
-  display: grid;
-  grid-template-columns: 1fr .86fr;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 48px;
-  margin-bottom: 42px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 42px;
 }
 
 .review-collage-shot {
@@ -1059,7 +1064,7 @@ main {
   margin-top: 48px;
   border: 1px solid rgba(229, 77, 120, .22);
   border-radius: var(--radius);
-  background: #fff4f6;
+  background: var(--band);
   padding: 30px 72px;
 }
 
@@ -1078,7 +1083,7 @@ main {
   min-height: calc(100vh - 84px);
   background:
     radial-gradient(circle at 74% 8%, rgba(45, 212, 191, .15), transparent 32%),
-    linear-gradient(105deg, #fff 0%, #fff4f6 44%, #ffe9ee 100%);
+    linear-gradient(105deg, #fff 0%, var(--band) 44%, var(--pink) 100%);
   padding: 48px 20px;
 }
 
@@ -1107,7 +1112,7 @@ main {
 }
 
 .book-input:focus {
-  border-color: #e54d78;
+  border-color: var(--pink-strong);
   box-shadow: 0 0 0 3px rgba(244, 114, 182, .28);
 }
 

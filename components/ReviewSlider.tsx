@@ -4,6 +4,22 @@ import { useState, useEffect, useCallback } from "react";
 
 const reviews = [
   {
+    name: "srinivasan balaji",
+    initial: "s",
+    color: "#4a8fd4",
+    rating: 5,
+    time: "8 months ago",
+    text: "Visited this clinic for my long standing dental problem and the treatment experience was excellent. Dr Vijay's work was precise, \"golden finger\" touch and the procedure was painless.. Highly recommended for anyone seeking good quality dental care.",
+  },
+  {
+    name: "Logie",
+    initial: "L",
+    color: "#e8890c",
+    rating: 5,
+    time: "11 months ago",
+    text: "The doctor is such a nice person and calm too. He treats me in a very polite way. He's one of the well known dentist in Adambakkam since 2009.",
+  },
+  {
     name: "Anjalin Nirmala",
     initial: "A",
     color: "#e8890c",

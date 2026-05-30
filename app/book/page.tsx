@@ -9,6 +9,8 @@ import { CLINIC } from "@/lib/constants";
 export default function BookAppointment() {
   const [formData, setFormData] = useState({
     name: "",
+    age: "",
+    gender: "",
     phone: "",
     email: "",
     service: "",
@@ -26,7 +28,7 @@ export default function BookAppointment() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     setLoading(true);
-    const text = `*New Appointment Request*%0A%0A*Patient Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email || "N/A"}%0A*Service:* ${formData.service}%0A*Preferred Date:* ${formData.date}%0A*Preferred Time:* ${formData.time}%0A*Message:* ${formData.message || "None"}`;
+    const text = `*New Appointment Request*%0A%0A*Patient Name:* ${formData.name}%0A*Age:* ${formData.age}%0A*Gender:* ${formData.gender}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email || "N/A"}%0A*Service:* ${formData.service}%0A*Preferred Date:* ${formData.date}%0A*Preferred Time:* ${formData.time}%0A*Message:* ${formData.message || "None"}`;
     // Small delay so user sees the loading state
     setTimeout(() => {
       window.open(`https://wa.me/${CLINIC.whatsapp}?text=${text}`, "_blank", "noopener,noreferrer");
@@ -76,19 +78,32 @@ export default function BookAppointment() {
                   <Field id="field-phone" label="Phone Number" name="phone" value={formData.phone} onChange={handleChange} required type="tel" pattern="[0-9]{10}" maxLength={10} title="Please enter a valid 10-digit phone number" />
                 </div>
                 <div className="grid gap-5 sm:grid-cols-2">
+                  <Field id="field-age" label="Age" name="age" value={formData.age} onChange={handleChange} required type="number" min="1" max="120" />
+                  <div>
+                    <label htmlFor="field-gender" className="mb-1.5 block text-sm font-semibold text-gray-700">Gender *</label>
+                    <select id="field-gender" required name="gender" value={formData.gender} onChange={handleChange} className="book-input">
+                      <option value="">Select Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="grid gap-5 sm:grid-cols-2">
                   <Field id="field-email" label="Email Address" name="email" value={formData.email} onChange={handleChange} type="email" />
                   <div>
                     <label htmlFor="field-service" className="mb-1.5 block text-sm font-semibold text-gray-700">Service Type *</label>
                     <select id="field-service" required name="service" value={formData.service} onChange={handleChange} className="book-input">
                       <option value="">Select a service</option>
-                      <option>General Checkup</option>
+                      <option>General Consultation</option>
                       <option>Teeth Whitening</option>
                       <option>Dental Implants</option>
                       <option>Root Canal</option>
-                      <option>Cosmetic Bonding</option>
                       <option>Cosmetic Procedures</option>
                       <option>Preventive Care</option>
-                      <option>Orthodontics / Braces</option>
+                      <option>Orthodontics / Braces / Aligners</option>
+                      <option>Pediatric Care</option>
+                      <option>Geriatric Care</option>
                     </select>
                   </div>
                 </div>

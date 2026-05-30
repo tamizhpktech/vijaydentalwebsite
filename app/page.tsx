@@ -91,7 +91,7 @@ const gallery: Array<[string, string, number | string, number | string, string]>
   ["DENTAL IMPLANTS", "Restore Function, Restore Confidence", "/asset/smile-gallery/before-dental-implants.png", "/asset/smile-gallery/after-dental-implants.png", "implant"],
   ["ORTHODONTICS", "Achieving Perfect Alignment", "/asset/smile-gallery/before-orthodontics.png", "/asset/smile-gallery/after-orthodontics.png", "braces"],
   ["TEETH WHITENING", "A Brighter, Brighter Smile", "/asset/smile-gallery/before-teeth-whitening.png", "/asset/smile-gallery/after-teeth-whitening.png", "tooth"],
-  ["PORCELAIN VENEERS", "Flawless, Natural-Looking Smiles", "/asset/smile-gallery/before-porcelain-veneers.png", "/asset/smile-gallery/after-porcelain-veneers.png", "sparkle"],
+  ["PORCELAIN VENEERS", "Flawless, Natural-Looking Smiles", "/asset/smile-gallery/before procelin venners final.png", "/asset/smile-gallery/after-porcelain-veneers.png", "sparkle"],
 ];
 
 const smileCrops = [

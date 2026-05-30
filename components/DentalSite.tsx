@@ -290,7 +290,7 @@ function SmileCrop({ index, label }: { index: number | string; label: string }) 
 
 const galleryCards: Array<{ title: string; sub: string; icon: IconName; before: number | string; after: number | string }> = [
   { title: "TEETH WHITENING", sub: "A Brighter, Brighter Smile", icon: "tooth" as IconName, before: "/asset/smile-gallery/before-teeth-whitening.png", after: "/asset/smile-gallery/after-teeth-whitening.png" },
-  { title: "PORCELAIN VENEERS", sub: "Flawless, Natural-Looking Smiles", icon: "bonding" as IconName, before: "/asset/smile-gallery/before-porcelain-veneers.png", after: "/asset/smile-gallery/after-porcelain-veneers.png" },
+  { title: "PORCELAIN VENEERS", sub: "Flawless, Natural-Looking Smiles", icon: "bonding" as IconName, before: "/asset/smile-gallery/before procelin venners final.png", after: "/asset/smile-gallery/after-porcelain-veneers.png" },
   { title: "ORTHODONTICS", sub: "Achieving Perfect Alignment", icon: "braces" as IconName, before: "/asset/smile-gallery/before-orthodontics.png", after: "/asset/smile-gallery/after-orthodontics.png" },
   { title: "DENTAL IMPLANTS", sub: "Restore Function, Restore Confidence", icon: "implant" as IconName, before: "/asset/smile-gallery/before-dental-implants.png", after: "/asset/smile-gallery/after-dental-implants.png" },
   { title: "GUM CONTOURING", sub: "Balanced Gums, Beautiful Smiles", icon: "braces" as IconName, before: 10, after: 11 },

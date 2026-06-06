@@ -70,13 +70,13 @@ const faqSchema = {
       name: "Is Dr. Vijay a specialist?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Dr. Vijay Amirtharaj holds a BDS and MDS degree and is an experienced endodontist with 25+ years of practice in comprehensive and cosmetic dental care.",
+        text: "Yes. Dr. Vijay Amirtharaj holds an MDS degree and is an experienced endodontist with 25+ years of practice in comprehensive and cosmetic dental care.",
       },
     },
   ],
 };
 
-type IconName = "sparkle" | "tooth" | "shield" | "star" | "thumb" | "phone" | "pin" | "clock" | "calendar" | "users" | "heart" | "implant" | "braces";
+type IconName = "sparkle" | "tooth" | "shield" | "star" | "thumb" | "phone" | "email" | "pin" | "clock" | "calendar" | "users" | "heart" | "implant" | "braces";
 
 const services = [
   ["Preventive Care", "Keep your smile healthy with regular check-ups and professional cleanings.", "/asset/service5.jpeg", "shield"],
@@ -255,7 +255,7 @@ export default function Home() {
                 <div className="doctor-info-strip">
                   <div className="doc-name">
                     <h3>Dr. Vijay Amirtharaj</h3>
-                    <p>BDS, MDS</p>
+                    <p>MDS</p>
                   </div>
                   <div className="doc-creds">
                     <span>Founder & Chief Dental Surgeon</span>
@@ -284,6 +284,7 @@ export default function Home() {
             </div>
             <div className="contact-card">
               <ContactItem icon="phone" title="Call Us" lines={[CLINIC.phone[0]]} />
+              <ContactItem icon="email" title="Email Us" lines={[CLINIC.email]} />
               <ContactItem icon="pin" title="Visit Us" lines={["Dr. Vijay's Dental Clinic", `${CLINIC.address.line1} ${CLINIC.address.line2}`, `${CLINIC.address.city} ${CLINIC.address.state}`]} />
               <ContactItem icon="clock" title="Clinic Timings" lines={["Mon - Sat", "5 PM - 9 PM", "Sunday", "By appointment only"]} />
             </div>
@@ -383,6 +384,7 @@ function Icon({ name }: { name: IconName }) {
   if (name === "star") return <svg viewBox="0 0 64 64"><path className="fill-brand-pink" d="M32 6l7.6 15.4 17 2.5-12.3 12 2.9 17L32 44.8 16.8 53l2.9-17-12.3-12 17-2.5L32 6Z" /></svg>;
   if (name === "thumb") return <svg viewBox="0 0 64 64"><path {...common} d="M23 55H12V29h11v26ZM23 31l10-21c1.2-2.5 5-1.7 5 1.1V25h12.2c4.1 0 7.2 3.7 6.4 7.8l-3 15.6A8 8 0 0 1 45.7 55H23V31Z" /></svg>;
   if (name === "phone") return <svg viewBox="0 0 64 64"><path {...common} d="M22 12l7 12-5 4c4 8 8 12 16 16l4-5 12 7c-1 6-5 10-11 10-18 0-37-19-37-37 0-6 4-10 14-7Z" /></svg>;
+  if (name === "email") return <svg viewBox="0 0 64 64"><rect {...common} x="10" y="17" width="44" height="30" rx="4" /><path {...common} d="M12 21l20 16 20-16" /></svg>;
   if (name === "pin") return <svg viewBox="0 0 64 64"><path {...common} d="M32 58s18-17 18-33a18 18 0 0 0-36 0c0 16 18 33 18 33Z" /><circle {...common} cx="32" cy="25" r="6" /></svg>;
   if (name === "clock") return <svg viewBox="0 0 64 64"><circle {...common} cx="32" cy="32" r="23" /><path {...common} d="M32 18v16l10 6" /></svg>;
   if (name === "calendar") return <svg viewBox="0 0 64 64"><rect {...common} x="13" y="16" width="38" height="36" rx="4" /><path {...common} d="M21 10v12M43 10v12M13 28h38M23 37h4M31 37h4M39 37h4M23 45h4M31 45h4M39 45h4" /></svg>;

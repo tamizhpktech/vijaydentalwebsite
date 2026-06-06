@@ -10,6 +10,7 @@ type IconName =
   | "star"
   | "thumb"
   | "phone"
+  | "email"
   | "pin"
   | "clock"
   | "calendar"
@@ -90,6 +91,15 @@ export function Icon({ name, className = "" }: { name: IconName; className?: str
     return (
       <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
         <path className={common} d="M22 12l7 12-5 4c4 8 8 12 16 16l4-5 12 7c-1 6-5 10-11 10-18 0-37-19-37-37 0-6 4-10 14-7Z" />
+      </svg>
+    );
+  }
+
+  if (name === "email") {
+    return (
+      <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
+        <rect className={common} x="10" y="17" width="44" height="30" rx="4" />
+        <path className={common} d="M12 21l20 16 20-16" />
       </svg>
     );
   }
@@ -367,7 +377,7 @@ export function ServicesPage() {
             Comprehensive Dental Care<br />for a Healthier Smile
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-xl leading-snug text-black">
-            At Dr. Vijay&apos;s Dental Clinic <strong>"NGO Colony,Admbkm"</strong>, we provide a wide range of advanced dental treatments tailored to your needs in a comfortable and caring environment.
+            At Dr. Vijay&apos;s Dental Clinic <strong>&quot;NGO Colony,Admbkm&quot;</strong>, we provide a wide range of advanced dental treatments tailored to your needs in a comfortable and caring environment.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-x-16 gap-y-4 text-base text-black">
             {["Advanced Technology", "Experienced Professionals", "Pain-free Treatments", "Patient-Centric Care"].map((item) => (
@@ -417,10 +427,10 @@ export function SmileGalleryPage() {
           {galleryCards.map((item) => (
             <article key={item.title} className="rounded-[14px] bg-white p-4 shadow-card ring-1 ring-black/5">
               <div className="grid grid-cols-2 gap-2">
-                <div className="h-[168px] max-xl:h-[140px]">
+                <div className="aspect-square">
                   <SmileCrop index={item.before} label="Before" />
                 </div>
-                <div className="h-[168px] max-xl:h-[140px]">
+                <div className="aspect-square">
                   <SmileCrop index={item.after} label="After" />
                 </div>
               </div>
@@ -522,7 +532,7 @@ export function AboutPage() {
           />
           <div className="absolute bottom-24 right-10 rounded-[18px] bg-white/90 px-8 py-6 shadow-card backdrop-blur max-md:right-4">
             <h2 className="text-[26px] font-extrabold text-black">Dr. Vijay Amirtharaj</h2>
-            <p className="mt-2 text-sm font-semibold text-[#ce5577]">BDS, MDS</p>
+            <p className="mt-2 text-sm font-semibold text-[#ce5577]">MDS</p>
             <p className="mt-3 text-sm text-black">Founder & Chief Dental Surgeon</p>
             <p className="mt-2 text-sm text-black">16+ Years of Experience</p>
           </div>
@@ -580,6 +590,7 @@ export function ContactPage() {
           <div className="rounded-[18px] bg-white p-10 shadow-card ring-1 ring-black/5">
             {[
               ["phone", "Call Us", [CLINIC.phone[0]]],
+              ["email", "Email Us", [CLINIC.email]],
               ["pin", "Visit Us", ["Dr. Vijay's Dental Clinic", `${CLINIC.address.line1} ${CLINIC.address.line2}`, `${CLINIC.address.city} ${CLINIC.address.state}`]],
               ["clock", "Clinic Timings", ["Mon - Sat", "5 PM - 9 PM", "Sunday", "By appointment only"]],
             ].map(([icon, title, lines], index) => (

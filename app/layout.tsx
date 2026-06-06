@@ -107,7 +107,7 @@ const localBusinessSchema = {
   description:
     "Dr. Vijay's Dental Clinic offers comprehensive dental services including teeth whitening, dental implants, root canal treatments, cosmetic dentistry, and preventive care in Adambakkam, Chennai.",
   telephone: ["+91-99947-87165"],
-  email: "vijaydentalclinic@gmail.com",
+  email: "dvdcadambakkam@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "33A, N.G.O. Colony, Ganesh Nagar",
@@ -166,7 +166,7 @@ const localBusinessSchema = {
     "@type": "Person",
     name: "Dr. Vijay Amirtharaj",
     jobTitle: "Chief Dental Surgeon & Endodontist",
-    description: "BDS, MDS — 25+ years of experience in comprehensive dental care",
+    description: "MDS - 25+ years of experience in comprehensive dental care",
     worksFor: {
       "@id": `${BASE_URL}/#dentist`,
     },

@@ -3,6 +3,7 @@ export const CLINIC = {
   name: "Dr. Vijay's Dental Clinic",
   tagline: "Expert Care with Precision",
   phone: ["+91 99947 87165"] as const,
+  email: "dvdcadambakkam@gmail.com",
   whatsapp: "919994787165",
   address: {
     line1: "33A,",

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { CLINIC } from "@/lib/constants";
@@ -101,9 +100,11 @@ export default function BookAppointment() {
                       <option>Root Canal</option>
                       <option>Cosmetic Procedures</option>
                       <option>Preventive Care</option>
+                      <option>Sleep Dentistry</option>
+                      <option>Periodontics (Gum Care)</option>
                       <option>Orthodontics / Braces / Aligners</option>
                       <option>Pediatric Care</option>
-                      <option>Geriatric Care</option>
+                      <option>Geriatric Dentistry</option>
                     </select>
                   </div>
                 </div>

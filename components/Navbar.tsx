@@ -51,7 +51,7 @@ export default function Navbar() {
               className="h-20 w-auto max-sm:h-16" 
             />
             <span className="flex flex-col leading-[1.08]">
-              <span className="text-[19px] font-extrabold tracking-tight text-black max-sm:text-base">Dr. Vijay&apos;s</span>
+              <span className="text-[22px] font-black tracking-tight text-black max-sm:text-[18px]">Dr. Vijay&apos;s</span>
               <span className="mt-0.5 text-[19px] font-extrabold tracking-tight text-black max-sm:text-base">DENTAL CLINIC</span>
               <em className="mt-1 text-[10px] font-normal not-italic leading-tight text-brand-pink max-sm:text-[8px]">Expert Care with Precision</em>
             </span>
